@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- ListView的头部 -->
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:layout_marginBottom="20dp"
+        >
+
+    <!-- 内容 -->
+    <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal|center_vertical"
+            android:id="@+id/head_contentLayout"
+            >
+
+
+        <!-- 提示、最近更新 -->
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:id="@+id/text_panel"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_centerInParent="true"
+                android:orientation="horizontal">
+
+            <!-- 提示 -->
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="下拉刷新"
+                    android:textColor="@color/pull_to"
+                    android:gravity="center_vertical"
+                    android:textSize="10sp"
+                    android:id="@+id/head_tipsTextView"
+                    />
+
+            <!-- 最近更新 -->
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/head_lastUpdatedTextView"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="8dp"
+                    android:text="上次更新"
+                    android:textColor="@color/gold"
+                    android:textSize="10sp"
+                    />
+
+        </LinearLayout>
+
+        <!-- 箭头图像、进度条 -->
+        <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/text_panel"
+                android:paddingRight="5dp"
+                android:id="@+id/image_panel"
+                >
+
+            <!-- 箭头 -->
+            <ImageView
+                    android:layout_width="14dp"
+                    android:layout_height="14dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/arrow"
+                    android:id="@+id/head_arrowImageView"
+                    />
+
+            <!-- 进度条 -->
+            <ProgressBar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="?android:attr/progressBarStyleSmall"
+                    android:layout_gravity="center"
+                    android:id="@+id/head_progressBar"
+                    android:visibility="gone"
+                    />
+
+        </FrameLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

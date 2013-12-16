@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:descendantFocusability="blocksDescendants"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+            android:gravity="center_vertical"
+            android:id="@+id/label_detail_id"
+            android:background="@drawable/list_item_selector"
+            android:paddingTop="5.0dip"
+            android:paddingBottom="5.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="66.0dip">
+
+        <FrameLayout
+                android:id="@+id/resource_icon_id"
+                android:paddingLeft="7.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:id="@+id/resource_icon"
+                    android:layout_width="48.0dip"
+                    android:layout_height="48.0dip"
+                    android:scaleType="centerInside"/>
+
+            <ImageView
+                    android:id="@+id/fload_id"
+                    android:background="@drawable/new_icon"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"/>
+        </FrameLayout>
+
+        <ImageView
+                android:id="@+id/divid_line_id"
+                android:background="@drawable/divid_line"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7.0dip"/>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_weight="1.0">
+
+            <TextView
+                    android:ellipsize="marquee"
+                    android:id="@+id/label_app_name"
+                    android:fadingEdge="none"
+                    android:selectAllOnFocus="true"
+                    style="@style/ResourceDetailsLabel.Large"/>
+
+            <TextView
+                    android:ellipsize="marquee"
+                    android:id="@+id/app_category_size"
+                    style="@style/ResourceDetailsLabel.Small"/>
+        </LinearLayout>
+
+        <TextView
+                android:textSize="10.0sp"
+                android:textColor="#ffb43409"
+                android:gravity="center_horizontal"
+                android:id="@+id/smile_face_id"
+                android:layout_width="35.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="3.0dip"
+                android:layout_marginTop="1.0dip"
+                android:singleLine="true"
+                android:drawableTop="@drawable/smile_face"/>
+
+        <TextView
+                android:textSize="10.0sp"
+                android:textColor="#ff06223b"
+                android:gravity="center_horizontal"
+                android:id="@+id/cry_face_id"
+                android:layout_width="35.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="1.0dip"
+                android:layout_marginRight="10.0dip"
+                android:singleLine="true"
+                android:drawableTop="@drawable/cry_face"/>
+    </LinearLayout>
+
+    <include layout="@layout/item_pop_layout"/>
+</RelativeLayout>

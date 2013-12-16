@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:descendantFocusability="blocksDescendants"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+            android:id="@+id/label_detail_id"
+            android:background="@drawable/list_item_selector"
+            android:layout_width="fill_parent"
+            android:layout_height="66.0dip">
+
+        <FrameLayout
+                android:id="@+id/resource_icon_id"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:layout_marginLeft="5.0dip"
+                android:layout_centerVertical="true">
+
+            <ImageView
+                    android:id="@+id/resource_icon"
+                    android:background="@drawable/software_icon_bg"
+                    android:layout_width="48.0dip"
+                    android:layout_height="48.0dip"/>
+        </FrameLayout>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6.0dip"
+                android:layout_marginRight="6.0dip"
+                android:layout_toRightOf="@id/resource_icon_id"
+                android:layout_centerVertical="true">
+
+            <TextView
+                    android:ellipsize="marquee"
+                    android:id="@+id/txt_title"
+                    android:fadingEdge="none"
+                    android:selectAllOnFocus="true"
+                    style="@style/ResourceDetailsLabel.Large"/>
+
+            <TextView
+                    android:ellipsize="marquee"
+                    android:id="@+id/txt_date"
+                    style="@style/ResourceDetailsLabel.Small"/>
+
+            <TextView
+                    android:ellipsize="marquee"
+                    android:id="@+id/txt_subtitle"
+                    style="@style/ResourceDetailsLabel.Small"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

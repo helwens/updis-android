@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:gravity="center"
+        android:background="@drawable/ranking_title_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="40.0dip"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <Button
+            android:textSize="15.0sp"
+            android:textColor="@color/black"
+            android:id="@+id/btn_first_id"
+            android:background="@drawable/left_btn_pressed"
+            android:layout_width="118.0dip"
+            android:layout_height="32.0dip"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+    <Button
+            android:textSize="15.0sp"
+            android:textColor="@color/black"
+            android:id="@+id/btn_second_id"
+            android:background="@drawable/right_btn_selector"
+            android:layout_width="118.0dip"
+            android:layout_height="32.0dip"
+            android:layout_marginLeft="7.0dip"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+</LinearLayout>

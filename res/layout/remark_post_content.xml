@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:background="#ffffffff"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+            android:id="@+id/comment_title_id"
+            android:background="@drawable/top_nav_banner_bg_drawable"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:textSize="15.0sp"
+                android:textColor="@color/white"
+                android:paddingLeft="10.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/post_comment"
+                android:layout_centerVertical="true"/>
+
+        <ImageView
+                android:id="@+id/back_to_previous"
+                android:background="@drawable/click_selector"
+                android:padding="5.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15.0dip"
+                android:src="@drawable/back"
+                android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <EditText
+            android:textSize="14.0sp"
+            android:gravity="left"
+            android:id="@+id/comment_content"
+            android:background="@drawable/report_edittext_box"
+            android:padding="5.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginTop="20.0dip"
+            android:layout_marginRight="10.0dip"
+            android:hint="@string/comment_hint"
+            android:lines="6"
+            android:layout_below="@id/comment_title_id"/>
+
+    <TextView
+            android:textSize="13.0sp"
+            android:id="@+id/remain_char_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/comment_content"
+            android:layout_alignRight="@id/comment_content"/>
+
+    <LinearLayout
+            android:gravity="center"
+            android:id="@+id/comment_btns"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginBottom="20.0dip"
+            android:layout_alignParentBottom="true">
+
+        <Button
+                android:enabled="false"
+                android:textColor="@color/color_blue_btn_text"
+                android:id="@+id/comment_submit"
+                android:background="@drawable/btn_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/submit"/>
+
+        <Button
+                android:textColor="@color/color_blue_btn_text"
+                android:id="@+id/comment_cancel"
+                android:background="@drawable/btn_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.0dip"
+                android:text="@string/cancel"/>
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        android:background="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <RelativeLayout
+                android:background="@drawable/top_nav_banner_bg_drawable"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:textSize="15.0sp"
+                    android:textColor="@color/white"
+                    android:paddingLeft="10.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/feedback"
+                    android:layout_centerVertical="true"/>
+
+            <ImageView
+                    android:id="@+id/back_to_previous"
+                    android:background="@drawable/click_selector"
+                    android:padding="5.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="15.0dip"
+                    android:src="@drawable/back"
+                    android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:paddingTop="20.0dip"
+                android:paddingBottom="20.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            <TextView
+                    android:textColor="@color/black"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:text="@string/feedback_type"/>
+
+            <Spinner
+                    android:id="@+id/spinner_feedback_type"
+                    android:background="@drawable/bg_spinner"
+                    android:paddingLeft="5.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginRight="10.0dip"/>
+        </LinearLayout>
+
+        <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:text="@string/feedback_content"/>
+
+        <EditText
+                android:textSize="13.0sp"
+                android:gravity="left"
+                android:id="@+id/feedback_content"
+                android:background="@drawable/report_edittext_box"
+                android:padding="5.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:layout_marginTop="10.0dip"
+                android:layout_marginRight="10.0dip"
+                android:hint="@string/feedback_hint"
+                android:lines="6"/>
+
+        <TextView
+                android:textSize="13.0sp"
+                android:layout_gravity="right"
+                android:id="@+id/remain_char_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0dip"/>
+
+        <Button
+                android:enabled="false"
+                android:textColor="@color/color_blue_btn_text"
+                android:layout_gravity="center_horizontal"
+                android:id="@+id/btn_ok"
+                android:background="@drawable/btn_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30.0dip"
+                android:layout_marginBottom="30.0dip"
+                android:text="@string/submit"/>
+    </LinearLayout>
+</ScrollView>

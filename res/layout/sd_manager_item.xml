@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:descendantFocusability="blocksDescendants"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+            android:id="@+id/label_detail_id"
+            android:background="@drawable/list_item_selector"
+            android:layout_width="fill_parent"
+            android:layout_height="66.0dip">
+
+        <ImageView
+                android:id="@+id/resource_icon"
+                android:background="@drawable/software_icon_bg"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:layout_marginLeft="5.0dip"
+                android:scaleType="centerInside"
+                android:layout_centerVertical="true"/>
+
+        <ImageView
+                android:id="@+id/divid_line_id"
+                android:background="@drawable/divid_line"
+                android:layout_width="1.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6.0dip"
+                android:layout_toRightOf="@id/resource_icon"
+                android:layout_centerVertical="true"/>
+
+        <CheckBox
+                android:id="@+id/h_checked_state"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:clickable="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="6.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                style="@style/checkbox_sdcard_manager"/>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6.0dip"
+                android:layout_marginRight="6.0dip"
+                android:layout_toLeftOf="@id/h_checked_state"
+                android:layout_toRightOf="@id/divid_line_id"
+                android:layout_centerVertical="true">
+
+            <TextView
+                    android:ellipsize="marquee"
+                    android:id="@+id/label_app_name"
+                    android:fadingEdge="none"
+                    android:selectAllOnFocus="true"
+                    style="@style/ResourceDetailsLabel.Large"/>
+
+            <TextView
+                    android:ellipsize="marquee"
+                    android:id="@+id/app_version_size"
+                    style="@style/ResourceDetailsLabel.Small"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+            android:id="@+id/space_id"
+            android:background="@drawable/quickaction_bg"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="73.0dip"
+            android:layout_marginTop="-8.0dip"
+            android:layout_below="@id/label_detail_id">
+
+        <HorizontalScrollView
+                android:id="@+id/scroll"
+                android:scrollbars="none"
+                android:fadingEdgeLength="0.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerHorizontal="true">
+
+            <LinearLayout
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:id="@+id/tracks"
+                    android:paddingTop="4.0dip"
+                    android:paddingBottom="4.0dip"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent">
+
+                <Button
+                        android:textSize="14.0sp"
+                        android:id="@+id/installation_btn_id"
+                        android:background="@drawable/space_btn_selector"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/install_apk_text"
+                        android:layout_weight="1.0"/>
+
+                <Button
+                        android:textSize="14.0sp"
+                        android:id="@+id/delete_btn_id"
+                        android:background="@drawable/space_btn_selector"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:text="@string/delete"
+                        android:layout_weight="1.0"/>
+            </LinearLayout>
+        </HorizontalScrollView>
+    </RelativeLayout>
+</RelativeLayout>

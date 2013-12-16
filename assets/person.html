@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="apple-touch-icon" href="style/images/icon.png"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- 禁止用户手动缩放 -->
+    <meta name="viewport"
+          content="width=device-width initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+    <!-- 忽略将页面中的数字识别为电话号码 -->
+    <meta content="telephone=no" name="format-detection"/>
+    <title>person</title>
+</head>
+<style>
+
+    *{ margin:0; padding:0}
+    li {
+    list-style: none;
+    }
+    body {
+    width: 100%;
+    min-height: auto;
+    font-size: 22px;
+    }
+    #main_1 {
+    position: relative;
+    background: #e2edf0;
+    min-height: auto;
+    }
+    .content_m {
+    background: url(file:///android_asset/bgctn.png) left top repeat-x;
+    padding: 20px 15px;
+    }
+
+    .meminfo {
+    padding: 10px 10px 10px 280px;
+    position: relative;
+    }
+    .meminfo h1 {
+    color: #000000;
+    font-size: 30px;
+    padding-bottom: 15px;
+    }
+    .meminfo li {
+    color: #575757;
+    height: 50px;
+    line-height: 50px;
+    }
+    .meminfo img {
+    position: absolute;
+    left: 30px;
+    top: 10px;
+    background: url(file:///android_asset/picbg_2.png) left top no-repeat;
+    padding: 3px 5px 6px 3px;
+    }
+    .box {
+    padding: 0 25px;
+    width: 95%;
+    background: url(file:///android_asset/box_2.png) left top repeat-y;
+    color: #6a6a6a;
+    }
+    .box h2 {
+    color: #293d45;
+    font-size: 26px;
+    }
+    .box p {
+    padding: 10px 0;
+    text-indent: 2em;
+    line-height: 180%;
+    }
+    input.btn7 {
+    background: url(file:///android_asset/btn7.png) no-repeat;
+    width: 104px;
+    height: 36px;
+    padding-bottom: 15px;
+    vertical-align: top;
+    color: #fff;
+    font-size: 24px;
+    border: 0;
+    cursor: pointer;
+    }
+</style>
+<body>
+
+<div id="main_1">
+
+    <div class="content_m">
+
+        <div class="meminfo">
+            <h1>$name</h1>
+            <ul>
+                <li><strong>所在部门：</strong>$dept</li>
+                <li><strong>出生日期：</strong>$birthday</li>
+                <li><strong>性　　别：</strong>$gender</li>
+                <li><strong>专　　业：</strong>$specialty</li>
+                <li><strong>学　　历：</strong>$educational</li>
+                <li><strong>学　　位：</strong>$degree</li>
+                <li><strong>毕业时间：</strong>$graduationdate</li>
+                <li><strong>进院时间：</strong>$entrydate</li>
+                <li><strong>职　　级：</strong>$rank</li>
+                <li><strong>职　　称：</strong>$titles</li>
+            </ul>
+            <img src="$iconurl" width="213" height="278"></div>
+
+        <img src="file:///android_asset/box_1.png" width="95%" height="20" style="display:block;">
+
+        <div class="box">
+            <h2>个人简历：</h2>
+            <p>$resume</p></div>
+        <img src="file:///android_asset/box_3.png" width="95%" height="20" style="display:block;">
+
+
+        <div id="btns"><input name="" onclick="ProxyBridge.backList()" type="button" value="返回" class="btn btn-primary btn-large" /></div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

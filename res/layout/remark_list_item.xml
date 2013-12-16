@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:orientation="horizontal"
+        android:background="@color/detail_bg"
+        android:padding="2.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+            android:id="@+id/avatar_comment"
+            android:paddingLeft="10.0dip"
+            android:paddingTop="10.0dip"
+            android:paddingRight="10.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/avatar_comment"/>
+
+    <ImageView
+            android:id="@+id/divid_line_id"
+            android:background="@drawable/divid_line"
+            android:layout_width="1.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10.0dip"
+            android:layout_toRightOf="@id/avatar_comment"/>
+
+    <TextView
+            android:textSize="14.0sp"
+            android:textColor="#ff629ad1"
+            android:id="@+id/tv_user_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_toRightOf="@id/divid_line_id"/>
+
+    <TextView
+            android:textSize="11.0sp"
+            android:textColor="#ff629ad1"
+            android:id="@+id/remark_date_id"
+            android:paddingRight="5.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6.0dip"
+            android:layout_toRightOf="@id/divid_line_id"
+            android:layout_below="@id/tv_user_comment"/>
+
+    <RelativeLayout
+            android:id="@+id/space_id"
+            android:paddingBottom="10.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/remark_date_id">
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/tracks"
+                android:background="@drawable/topic_quickaction_bg"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="60.0dip"
+                android:layout_marginRight="8.0dip">
+
+            <TextView
+                    android:textSize="13.0sp"
+                    android:textColor="#ff666666"
+                    android:id="@+id/remark_content_id"
+                    android:paddingTop="5.0dip"
+                    android:paddingRight="5.0dip"
+                    android:paddingBottom="5.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/avatar_comment"/>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:gravity="center"
+        android:orientation="vertical"
+        android:id="@+id/download_install_bar"
+        android:background="#ff0174c7"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+            android:id="@+id/d_install"
+            android:background="@drawable/resource_btn_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30.0dip"
+                android:src="@drawable/icon_install"
+                android:layout_centerVertical="true"/>
+
+        <TextView
+                android:text="@string/install_apk_text"
+                android:layout_centerInParent="true"
+                style="@style/ResourceProgressOverlay.SMedium"/>
+    </RelativeLayout>
+</LinearLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/body_container"
+        android:background="@drawable/bg_2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:m="http://schemas.android.com/apk/res/com.tianv.updis">
+
+    <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/container"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/detail_logo"
+                    android:background="@drawable/titles_5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"/>
+
+            <com.melvin.android.base.common.ui.MTextView
+                    android:id="@+id/mtext_dept"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    m:text="@string/updis_person_detail_dept"/>
+
+            <com.melvin.android.base.common.ui.MTextView
+                    android:id="@+id/mtext_birthday"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    m:text="@string/updis_person_detail_birthday"/>
+
+            <com.melvin.android.base.common.ui.MTextView
+                    android:id="@+id/mtext_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    m:text="@string/updis_person_detail_gender"/>
+
+            <com.melvin.android.base.common.ui.MTextView
+                    android:id="@+id/mtext_specialty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    m:text="@string/updis_person_detail_specialty"/>
+
+            <com.melvin.android.base.common.ui.MTextView
+                    android:id="@+id/mtext_educational"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    m:text="@string/updis_person_detail_educational"/>
+
+            <com.melvin.android.base.common.ui.MTextView
+                    android:id="@+id/mtext_degree"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    m:text="@string/updis_person_detail_degree"/>
+
+            <com.melvin.android.base.common.ui.MTextView
+                    android:id="@+id/mtext_graduationdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    m:text="@string/updis_person_detail_graduationdate"/>
+
+            <com.melvin.android.base.common.ui.MTextView
+                    android:id="@+id/mtext_entrydate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    m:text="@string/updis_person_detail_entrydate"/>
+
+            <com.melvin.android.base.common.ui.MTextView
+                    android:id="@+id/mtext_rank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    m:text="@string/updis_person_detail_rank"/>
+
+            <com.melvin.android.base.common.ui.MTextView
+                    android:id="@+id/mtext_titles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    m:text="@string/updis_person_detail_titles"/>
+
+            <com.melvin.android.base.common.ui.MTextView
+                    android:id="@+id/mtext_mobilePhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    m:text="@string/updis_person_detail_mobilePhone"/>
+
+            <com.melvin.android.base.common.ui.MTextView
+                    android:id="@+id/mtext_officePhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    m:text="@string/updis_person_detail_officePhone"/>
+
+            <com.melvin.android.base.common.ui.MTextView
+                    android:id="@+id/mtext_homeNum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    m:text="@string/updis_person_detail_homeNum"/>
+
+            <com.melvin.android.base.common.ui.MTextView
+                    android:id="@+id/mtext_resume"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    m:text="@string/updis_person_detail_resume"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

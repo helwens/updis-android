@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Fragment.Nav.Btn" parent="android:Theme">
+        <item name="android:height">20dp</item>
+    </style>
+
+    <style name="Fragment.Left.Nav.Btn" parent="Fragment.Nav.Btn">
+        <item name="android:background">#336699</item>
+    </style>
+
+    <style name="Fragment.Right.Nav.Btn" parent="Fragment.Nav.Btn">
+        <item name="android:background">#336699</item>
+    </style>
+
+    <style name="Fragment.Center.Nav.Btn" parent="Fragment.Nav.Btn">
+        <item name="android:background">#336699</item>
+    </style>
+
+    <style name="Fragment.Nav.Split" parent="android:Theme">
+        <item name="android:background">#FFFFFFff</item>
+    </style>
+
+</resources>

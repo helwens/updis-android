@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/shape_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginRight="10.0dip"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RadioGroup
+            android:orientation="vertical"
+            android:id="@+id/radio_group_push_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <RadioButton
+                android:id="@+id/push_time_open"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:button="@null"
+                android:text="@string/setting_push_time_open"
+                android:drawableRight="@drawable/radiobox_style"
+                style="@style/ResourceDetailsLabel.Large"/>
+
+        <View
+                android:background="@drawable/shape_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"/>
+
+        <RadioButton
+                android:id="@+id/push_time_night"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:text="@string/setting_push_time_night"
+                android:drawableRight="@drawable/radiobox_style"
+                style="@style/ResourceDetailsLabel.Large"/>
+
+        <View
+                android:background="@drawable/shape_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"/>
+
+        <RadioButton
+                android:id="@+id/push_time_close"
+                android:paddingLeft="10.0dip"
+                android:paddingRight="10.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:button="@null"
+                android:text="@string/setting_push_time_close"
+                android:drawableRight="@drawable/radiobox_style"
+                style="@style/ResourceDetailsLabel.Large"/>
+
+        <View
+                android:background="@drawable/shape_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1.0px"/>
+    </RadioGroup>
+</LinearLayout>

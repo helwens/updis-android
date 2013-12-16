@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:background="@drawable/bgtit"
+        android:layout_width="fill_parent"
+        android:layout_height="44.0dip"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+            android:id="@+id/nav_left_image"
+            android:background="@drawable/click_selector"
+            android:padding="10.0dip"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5.0dip"
+            android:src="@drawable/ico_arr"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"/>
+
+    <TextView
+            android:textSize="18.0sp"
+            android:textColor="@color/white"
+            android:ellipsize="marquee"
+            android:id="@+id/nav_title"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:textIsSelectable="false"/>
+
+    <ImageView
+            android:id="@+id/nav_title_image"
+            android:background="@drawable/click_selector"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo3"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+    <ImageView
+            android:id="@+id/nav_right_image"
+            android:background="@drawable/click_selector"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="5.0dip"
+            android:src="@drawable/ico_write"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_centerVertical="true"/>
+</RelativeLayout>

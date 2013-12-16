@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/linlayoutid"
+        android:background="@drawable/bg2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <include layout="@layout/top_navbar_layout"/>
+
+    <LinearLayout
+            android:id="@+id/body_layout_id"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+
+
+    </LinearLayout>
+
+    <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/post_comment_panel"
+            android:layout_gravity="bottom"
+            layout="@layout/write_comment_layout"/>
+</LinearLayout>

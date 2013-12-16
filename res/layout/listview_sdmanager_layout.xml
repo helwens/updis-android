@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+            android:background="@drawable/ranking_title_bg"
+            android:paddingTop="10.0dip"
+            android:paddingBottom="10.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:id="@+id/btn_bulk_delete_id"
+                android:background="@drawable/space_btn_selector"
+                android:layout_width="90.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="13.0dip"
+                android:text="@string/delete"
+                android:layout_alignParentLeft="true"/>
+
+        <Button
+                android:id="@+id/btn_refresh_id"
+                android:background="@drawable/space_btn_selector"
+                android:layout_width="90.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:text="@string/refresh"
+                android:layout_toRightOf="@id/btn_bulk_delete_id"/>
+
+        <Button
+                android:id="@+id/filebrowser_id"
+                android:background="@drawable/space_btn_selector"
+                android:paddingLeft="10.0dip"
+                android:layout_width="76.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="13.0dip"
+                android:text="@string/catalog"
+                android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <ProgressBar
+            android:id="@+id/file_search_progressbar"
+            android:focusable="false"
+            android:layout_width="fill_parent"
+            android:layout_height="3.2999878dip"
+            style="@style/progressBar_manager_sd"/>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/sd_manager_zone"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:id="@+id/apk_count_zone"
+                android:background="@color/second_title_color"
+                android:layout_width="fill_parent"
+                android:layout_height="30.0dip">
+
+            <TextView
+                    android:textColor="@color/black"
+                    android:gravity="center_vertical"
+                    android:layout_gravity="center_vertical"
+                    android:id="@+id/apk_count_id"
+                    android:paddingLeft="10.0dip"
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"/>
+
+            <LinearLayout
+                    android:id="@+id/select_check_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                <TextView
+                        android:id="@+id/tv_select_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10.0dip"
+                        android:text="@string/select_all"/>
+
+                <CheckBox
+                        android:id="@+id/select_all"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="6.0dip"
+                        android:checked="false"
+                        style="@style/checkbox_sdcard_manager"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+            <ListView
+                    android:id="@+id/list_view"
+                    android:fadingEdge="none"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:cacheColorHint="#ffffffff"
+                    android:divider="@drawable/listview_divider"
+                    android:footerDividersEnabled="false"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+            android:id="@+id/no_data_id"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+        <LinearLayout
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                    android:background="@drawable/no_content_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30.0dip"/>
+
+            <TextView
+                    android:textSize="20.0sp"
+                    android:textColor="@color/network_connect"
+                    android:gravity="center"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20.0dip"
+                    android:layout_marginBottom="55.0dip"
+                    android:text="@string/no_content_sd"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

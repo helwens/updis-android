@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <drawable name="darkgray">#dadada</drawable>
+    <drawable name="white">#FFFFFFFF</drawable>
+    <color name="transparent">#0000</color>
+    <color name="ok_btn_color">#315675</color>
+    <color name="dialog_border_color">#1B66AB</color>
+
+    <style name="NoTitleDialog" parent="android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+    </style>
+</resources>

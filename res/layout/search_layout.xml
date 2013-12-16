@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:background="#ffffffff"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/search_container"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+        <RelativeLayout
+                android:id="@+id/search_banner"
+                android:background="@drawable/top_nav_banner_bg_drawable"
+                android:layout_width="fill_parent"
+                android:layout_height="50.0dip">
+
+            <LinearLayout
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:id="@+id/search_btn_id"
+                    android:background="@drawable/btn_search"
+                    android:layout_width="60.0dip"
+                    android:layout_height="33.299988dip"
+                    android:layout_marginRight="3.0dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                <ImageButton
+                        android:layout_gravity="center_vertical"
+                        android:id="@+id/button_search"
+                        android:background="@drawable/search_button_selector"
+                        android:layout_width="27.0dip"
+                        android:layout_height="27.0dip"
+                        android:src="@drawable/search_icon"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                    android:id="@+id/search_pannel"
+                    android:background="@drawable/inputbox_bg"
+                    android:layout_width="fill_parent"
+                    android:layout_height="33.299988dip"
+                    android:layout_marginLeft="10.0dip"
+                    android:layout_marginTop="5.0dip"
+                    android:layout_marginRight="1.0dip"
+                    android:layout_marginBottom="5.0dip"
+                    android:layout_toLeftOf="@id/search_btn_id"
+                    android:layout_centerVertical="true">
+
+                <ImageView
+                        android:id="@+id/button_close"
+                        android:layout_width="23.0dip"
+                        android:layout_height="23.0dip"
+                        android:src="@drawable/search_close"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"/>
+
+                <AutoCompleteTextView
+                        android:textSize="14.0sp"
+                        android:id="@+id/input_search_query"
+                        android:background="@null"
+                        android:paddingRight="20.0dip"
+                        android:layout_width="fill_parent"
+                        android:layout_height="33.299988dip"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginRight="10.0dip"
+                        android:hint="@string/search_hint"
+                        android:singleLine="true"
+                        android:maxLength="50"
+                        android:layout_toLeftOf="@id/button_close"
+                        android:imeOptions="actionDone"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+                android:gravity="center_vertical"
+                android:id="@+id/search_results_header"
+                android:background="@color/second_title_color"
+                android:layout_width="fill_parent"
+                android:layout_height="26.399994dip">
+
+            <TextView
+                    android:textSize="14.0sp"
+                    android:textColor="@color/search_title_color"
+                    android:id="@+id/search_result"
+                    android:paddingLeft="10.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/search_keywords"/>
+        </LinearLayout>
+
+        <RelativeLayout
+                android:id="@+id/hot_keywords"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_weight="1.0"/>
+    </LinearLayout>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/search_container">
+
+        <include
+                android:id="@+id/loading"
+                layout="@layout/resources_progress_loading"/>
+
+        <ListView
+                android:id="@+id/list_search_results"
+                android:visibility="gone"
+                android:fadingEdge="none"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="#ffffffff"
+                android:divider="@drawable/listview_divider"
+                android:footerDividersEnabled="false"/>
+
+        <ListView
+                android:id="@+id/list_hotword_id"
+                android:visibility="gone"
+                android:fadingEdge="none"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:cacheColorHint="#ffffffff"
+                android:divider="@drawable/listview_divider"
+                android:footerDividersEnabled="false"/>
+    </LinearLayout>
+
+    <ViewStub
+            android:id="@+id/resources_searching"
+            android:layout="@layout/resources_progress_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"/>
+</RelativeLayout>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:orientation="vertical"
+        android:background="#ffffffff"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+            android:gravity="center_vertical"
+            android:background="@color/recommend_color"
+            android:layout_width="fill_parent"
+            android:layout_height="33.299988dip">
+
+        <TextView
+                android:textColor="@color/white"
+                android:id="@+id/dialog_title_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10.0dip"
+                android:text="@string/jijiedajia"
+                android:layout_alignParentLeft="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+            android:gravity="center"
+            android:id="@+id/jijie_btn_zone"
+            android:layout_width="fill_parent"
+            android:layout_height="60.0sp">
+
+        <RelativeLayout
+                android:gravity="center"
+                android:id="@+id/btn_recommend_id"
+                android:background="@drawable/btn_face"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20.0dip"
+                android:layout_marginRight="30.0dip">
+
+            <ImageView
+                    android:id="@+id/icon_recommend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10.0dip"
+                    android:src="@drawable/content_smile_face"
+                    android:layout_centerVertical="true"/>
+
+            <TextView
+                    android:textSize="14.0sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/text_recommend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/recommend"
+                    android:layout_toRightOf="@id/icon_recommend"/>
+
+            <TextView
+                    android:textSize="13.0sp"
+                    android:textColor="#ff9b1e22"
+                    android:id="@+id/num_recommend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/icon_recommend"
+                    android:layout_below="@id/text_recommend"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+                android:gravity="center"
+                android:id="@+id/btn_unrecommend_id"
+                android:background="@drawable/btn_face"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20.0dip">
+
+            <ImageView
+                    android:id="@+id/icon_unrecommend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10.0dip"
+                    android:src="@drawable/content_cry_face"
+                    android:layout_centerVertical="true"/>
+
+            <TextView
+                    android:textSize="14.0sp"
+                    android:textColor="@color/black"
+                    android:id="@+id/text_unrecommend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/unrecommend"
+                    android:layout_toRightOf="@id/icon_unrecommend"/>
+
+            <TextView
+                    android:textSize="13.0sp"
+                    android:textColor="#ff095998"
+                    android:id="@+id/num_unrecommend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/icon_unrecommend"
+                    android:layout_below="@id/text_unrecommend"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/comment_pannel"
+              android:background="@drawable/bgmenu"
+              android:gravity="center_vertical"
+              android:layout_weight="1"
+              android:orientation="horizontal">
+
+
+    <EditText
+            android:id="@+id/edit_comment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input2"
+            android:gravity="center_vertical"
+            android:layout_margin="5dp"
+            android:imeOptions="actionDone"
+            android:layout_weight="1"
+            android:singleLine="false"
+            android:textSize="20.0sp"/>
+
+    <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_post_comment"
+            android:layout_centerVertical="true"
+            android:text="发表"
+            android:layout_weight="0"
+            android:textColor="@color/white"
+            style="@style/login_layout_txt_tag"
+            android:background="@drawable/btn6"/>
+
+    <CheckBox
+            android:id="@+id/comment_isanonymous"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0"
+            android:background="@null"
+            android:button="@null"
+            android:drawableLeft="@drawable/checkbox_style"
+            android:text="@string/updis_anonymous"
+            style="@style/ResourceDetailsLabel.Large"
+            />
+
+</LinearLayout>

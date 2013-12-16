@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <com.uucun.android.common.ui.SlowGallery
+            android:id="@+id/full_gallery"
+            android:fadingEdge="none"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:spacing="2.0dip"/>
+
+    <com.uucun.android.common.ui.DotIndicatorLayout
+            android:id="@+id/full_dot_indicator"
+            android:paddingBottom="5.0dip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"/>
+</RelativeLayout>

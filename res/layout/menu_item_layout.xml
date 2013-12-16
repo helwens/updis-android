@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+            android:textSize="22.0sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="left|center"
+            android:id="@+id/menu_item_id"
+            android:layout_width="290.0dip"
+            android:layout_height="64.0dip"
+            android:layout_marginLeft="8.0dip"/>
+</LinearLayout>

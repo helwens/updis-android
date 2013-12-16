@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+            android:background="@drawable/top_nav_banner_bg_drawable"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:textSize="15.0sp"
+                android:textColor="@color/white"
+                android:paddingLeft="10.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/report"
+                android:layout_centerVertical="true"/>
+
+        <ImageView
+                android:id="@+id/back_to_previous"
+                android:background="@drawable/click_selector"
+                android:padding="5.0dip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15.0dip"
+                android:src="@drawable/back"
+                android:layout_alignParentRight="true"/>
+    </RelativeLayout>
+
+    <ScrollView
+            android:fadingEdge="none"
+            android:layout_width="fill_parent"
+            android:layout_height="0.0dip"
+            android:layout_weight="1.0">
+
+        <RadioGroup
+                android:orientation="vertical"
+                android:id="@+id/radio_group"
+                android:paddingLeft="10.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            <RadioButton
+                    android:textColor="@color/black"
+                    android:id="@+id/checked_download_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:button="@drawable/radio_button"
+                    android:text="@string/report_no_download"/>
+
+            <RadioButton
+                    android:textColor="@color/black"
+                    android:id="@+id/checked_install_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_button"
+                    android:text="@string/report_no_install"/>
+
+            <RadioButton
+                    android:textColor="@color/black"
+                    android:id="@+id/checked_virus_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_button"
+                    android:text="@string/report_carry_virus"/>
+
+            <RadioButton
+                    android:textColor="@color/black"
+                    android:id="@+id/checked_content_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_button"
+                    android:text="@string/report_content_error"/>
+
+            <RadioButton
+                    android:textColor="@color/black"
+                    android:id="@+id/checked_data_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_button"
+                    android:text="@string/report_harmful_mobile"/>
+
+            <RadioButton
+                    android:textColor="@color/black"
+                    android:id="@+id/checked_version_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_button"
+                    android:text="@string/report_version_update"/>
+
+            <RadioButton
+                    android:textColor="@color/black"
+                    android:id="@+id/checked_other_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/radio_button"
+                    android:text="@string/report_other_problem"/>
+        </RadioGroup>
+    </ScrollView>
+
+    <EditText
+            android:textSize="15.0sp"
+            android:gravity="left"
+            android:id="@+id/edt_content_id"
+            android:background="@drawable/report_edittext_box"
+            android:paddingLeft="5.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_marginTop="10.0dip"
+            android:layout_marginRight="10.0dip"
+            android:hint="@string/report_content"
+            android:lines="4"/>
+
+    <TextView
+            android:textSize="13.0sp"
+            android:layout_gravity="right"
+            android:id="@+id/remain_char_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10.0dip"/>
+
+    <LinearLayout
+            android:gravity="center_horizontal"
+            android:paddingTop="10.0dip"
+            android:paddingBottom="20.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <Button
+                android:enabled="false"
+                android:textColor="@color/color_blue_btn_text"
+                android:id="@+id/btn_ok"
+                android:background="@drawable/btn_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0dip"
+                android:text="@string/submit"/>
+
+        <Button
+                android:textColor="@color/color_blue_btn_text"
+                android:id="@+id/btn_quit"
+                android:background="@drawable/btn_normal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cancel_null_btn"/>
+    </LinearLayout>
+</LinearLayout>

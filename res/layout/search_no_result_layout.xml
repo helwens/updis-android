@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:background="@color/second_title_color"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+            android:textSize="14.0sp"
+            android:textColor="@color/search_title_color"
+            android:gravity="center_vertical"
+            android:id="@+id/header_id"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="26.399994dip"
+            android:layout_marginLeft="10.0dip"
+            android:text="@string/search_no_result"/>
+</LinearLayout>

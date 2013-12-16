@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+        android:fadingEdge="none"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <include layout="@layout/no_networking_status"/>
+
+        <com.uucun.android.common.ui.MyGridView
+                android:id="@+id/gridview_id"
+                android:fadingEdge="none"
+                android:layout_width="fill_parent"
+                android:layout_height="0.0dip"
+                android:layout_marginTop="5.0dip"
+                android:listSelector="@drawable/transparent"
+                android:horizontalSpacing="10.0dip"
+                android:verticalSpacing="10.0dip"
+                android:stretchMode="columnWidth"
+                android:columnWidth="90.0dip"
+                android:numColumns="3"
+                android:layout_weight="1.0"/>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:id="@+id/change_id"
+                android:visibility="gone"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+            <Button
+                    android:textColor="@color/btn_text_blue"
+                    android:layout_gravity="center"
+                    android:id="@+id/btn_change_id"
+                    android:background="@drawable/btn_normal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30.0dip"
+                    android:layout_marginBottom="30.0dip"
+                    android:text="@string/change_str"/>
+        </LinearLayout>
+
+        <ViewStub
+                android:layout_gravity="center"
+                android:id="@+id/resource_detail_loading"
+                android:layout="@layout/progress_overlay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+    </LinearLayout>
+</ScrollView>

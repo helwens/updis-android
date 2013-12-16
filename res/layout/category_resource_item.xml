@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        android:descendantFocusability="blocksDescendants"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+            android:id="@+id/label_detail_id"
+            android:background="@drawable/list_item_selector"
+            android:layout_width="fill_parent"
+            android:layout_height="66.0dip">
+
+        <ImageView
+                android:id="@+id/resource_icon"
+                android:background="@drawable/software_icon_bg"
+                android:layout_width="48.0dip"
+                android:layout_height="48.0dip"
+                android:layout_marginLeft="5.0dip"
+                android:scaleType="centerInside"
+                android:layout_centerVertical="true"/>
+
+        <ImageView
+                android:id="@+id/divid_line_id"
+                android:background="@drawable/divid_line"
+                android:layout_width="1.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6.0dip"
+                android:layout_toRightOf="@id/resource_icon"
+                android:layout_centerVertical="true"/>
+
+        <RelativeLayout
+                android:id="@+id/h_button_state"
+                android:layout_width="38.0dip"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10.0dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true">
+
+            <ImageView
+                    android:id="@+id/img_state_id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"/>
+
+            <TextView
+                    android:id="@+id/tv_state_id"
+                    android:layout_below="@id/img_state_id"
+                    android:layout_centerHorizontal="true"
+                    style="@style/ResourceStateButton"/>
+        </RelativeLayout>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6.0dip"
+                android:layout_marginRight="6.0dip"
+                android:layout_toLeftOf="@id/h_button_state"
+                android:layout_toRightOf="@id/divid_line_id"
+                android:layout_centerVertical="true">
+
+            <TextView
+                    android:ellipsize="marquee"
+                    android:id="@+id/label_app_name"
+                    android:fadingEdge="none"
+                    android:selectAllOnFocus="true"
+                    style="@style/ResourceDetailsLabel.Large"/>
+
+            <TextView
+                    android:ellipsize="marquee"
+                    android:id="@+id/app_date_downloadcount"
+                    android:paddingTop="8.0dip"
+                    style="@style/ResourceDetailsLabel.Small"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/item_pop_layout"/>
+</RelativeLayout>

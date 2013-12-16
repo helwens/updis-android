@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:orientation="vertical"
+        android:background="@drawable/shape_bg"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10.0dip"
+        android:layout_marginTop="10.0dip"
+        android:layout_marginRight="10.0dip"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBox
+            android:id="@+id/push_title_notice"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="@string/setting_push_title_notice"
+            android:drawableRight="@drawable/checkbox_style"
+            style="@style/ResourceDetailsLabel.Large"/>
+
+    <View
+            android:background="@drawable/shape_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"/>
+
+    <CheckBox
+            android:id="@+id/push_title_bidding"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="@string/setting_push_title_bidding"
+            android:drawableRight="@drawable/checkbox_style"
+            style="@style/ResourceDetailsLabel.Large"/>
+
+    <View
+            android:background="@drawable/shape_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"/>
+
+    <CheckBox
+            android:id="@+id/push_title_talk"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="@string/setting_push_title_talk"
+            android:drawableRight="@drawable/checkbox_style"
+            style="@style/ResourceDetailsLabel.Large"/>
+
+    <View
+            android:background="@drawable/shape_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"/>
+
+    <CheckBox
+            android:id="@+id/push_title_amateur"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="@string/setting_push_title_amateur"
+            android:drawableRight="@drawable/checkbox_style"
+            style="@style/ResourceDetailsLabel.Large"/>
+
+    <View
+            android:background="@drawable/shape_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"/>
+
+
+    <CheckBox
+            android:id="@+id/push_title_project"
+            android:paddingLeft="10.0dip"
+            android:paddingRight="10.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:button="@null"
+            android:text="@string/setting_push_title_project"
+            android:drawableRight="@drawable/checkbox_style"
+            style="@style/ResourceDetailsLabel.Large"/>
+
+    <View
+            android:background="@drawable/shape_line"
+            android:id="@+id/push_project_line"
+            android:visibility="gone"
+            android:layout_width="fill_parent"
+            android:layout_height="1.0px"/>
+
+</LinearLayout>

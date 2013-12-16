@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:background="@drawable/list_item_selector"
+        android:paddingLeft="10.0dip"
+        android:paddingTop="5.0dip"
+        android:paddingRight="20.0dip"
+        android:paddingBottom="5.0dip"
+        android:descendantFocusability="blocksDescendants"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <ImageView
+            android:id="@+id/resource_category_icon"
+            android:layout_width="48.0dip"
+            android:layout_height="48.0dip"
+            android:src="@drawable/uu_icon"
+            android:scaleType="centerInside"/>
+
+    <ImageView
+            android:id="@+id/divid_line_id"
+            android:background="@drawable/divid_line"
+            android:layout_width="1.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"/>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10.0dip"
+            android:layout_weight="1.0">
+
+        <TextView
+                android:ellipsize="marquee"
+                android:id="@+id/label_app_name"
+                android:selectAllOnFocus="true"
+                style="@style/ResourceDetailsLabel.Large"/>
+
+        <TextView
+                android:ellipsize="marquee"
+                android:id="@+id/app_category_lable"
+                android:paddingTop="2.0dip"
+                style="@style/ResourceDetailsLabel.Small"/>
+    </LinearLayout>
+
+    <ImageView
+            android:id="@+id/arrow_id"
+            android:background="@drawable/category_arrow"
+            style="@style/ResourceStateButton"/>
+</LinearLayout>

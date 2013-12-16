@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="@string/set_flow">
+
+        <CheckBoxPreference
+                android:title="@string/no_image_set"
+                android:key="@string/no_load_image_key"
+                android:summary="@string/image_flow_control"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/download_set">
+
+        <ListPreference
+                android:entries="@array/more_dowmload_count"
+                android:title="@string/download_task_count"
+                android:key="@string/download_set_key"
+                android:summary="@string/set_download_des"
+                android:dialogTitle="@string/same_time_download"
+                android:entryValues="@array/more_dowmload_count_value"/>
+
+        <CheckBoxPreference
+                android:title="@string/start_no_finish"
+                android:key="@string/auto_download_task_key"
+                android:defaultValue="false"/>
+
+        <CheckBoxPreference
+                android:title="@string/auto_wifi_download"
+                android:key="@string/auto_wifi_download_key"
+                android:defaultValue="false"/>
+
+        <CheckBoxPreference
+                android:title="@string/download_install"
+                android:key="@string/auto_install_key"
+                android:defaultValue="true"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/aide_title">
+
+        <CheckBoxPreference
+                android:title="@string/aide_switch"
+                android:key="@string/aide_switch_key"
+                android:defaultValue="false"/>
+
+        <ListPreference
+                android:entries="@array/aide_show_style"
+                android:title="@string/aide_show_sty"
+                android:key="@string/aide_show_key"
+                android:dialogTitle="@string/aide_show_sty"
+                android:entryValues="@array/aide_show_style_value"/>
+
+        <CheckBoxPreference
+                android:title="@string/aide_msg_sound"
+                android:key="@string/aide_msg_sound_key"
+                android:defaultValue="true"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/remind">
+
+        <CheckBoxPreference
+                android:title="@string/remind_update"
+                android:key="@string/remind_update_key"
+                android:summary="@string/remind_update_des"
+                android:defaultValue="false"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/delete_cache">
+
+        <Preference
+                android:title="@string/delete_all_cache"
+                android:key="@string/delete_cache_key"/>
+    </PreferenceCategory>
+</PreferenceScreen>

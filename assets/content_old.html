@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!-- 禁止用户手动缩放 -->
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"/>
+    <!-- 忽略将页面中的数字识别为电话号码 -->
+    <meta content="telephone=no" name="format-detection"/>
+    <title>content</title>
+    <style>
+
+        *{ margin:0; padding:0}
+        .content {
+        background: url(file:///android_asset/bgctn.png) left top repeat-x;
+        padding: 0px;
+        }
+        #main {
+        position: relative;
+        background: #e2edf0;
+        }
+        div.newstit {
+        padding-bottom: 10px;
+        background: url(file:///android_asset/bgline.png) left bottom repeat-x;
+        margin-bottom: 15px;
+        text-align: center;
+        }
+        div.newstit h1 {
+        color: #000000;
+        font-size: 22px;
+        }
+        div.newstit span {
+        margin: 0 9px;
+        color: #8399a0;
+        font-size: 18px;
+        }
+        div.newstit span strong {
+        color: #2d4d5b;
+        font-weight: normal;
+        }
+        .text_c {
+        text-align: center;
+        }
+        .content p {
+        padding: 10px 0;
+        color: #535353;
+        text-indent: 2em;
+        line-height: 180%;
+        }
+    </style>
+</head>
+
+<body>
+<div id="main">
+    <div class="content">
+        <div class="newstit">
+            <h1>$title</h1>
+            <span><strong>发布日期:</strong>$date</span><span><strong> 发布部门:</strong>$dept</span><span><strong>
+            发布人:</strong>$author</span><span><strong> 浏览:</strong>$readCount</span>
+        </div>
+        <p>$content</p>
+    </div>
+</body>
+</html>

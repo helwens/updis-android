@@ -1,0 +1,220 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.tianv.updis"
+          android:versionCode="19"
+          android:versionName="1.7.2">
+
+    <uses-sdk
+            android:minSdkVersion="8"
+            android:targetSdkVersion="15"/>
+
+    <permission
+            android:name="com.tianv.updis.permission.JPUSH_MESSAGE"
+            android:protectionLevel="signature"/>
+
+    <uses-permission android:name="com.tianv.updis.permission.JPUSH_MESSAGE"/>
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.GET_TASKS"/>
+    <uses-permission android:name="android.permission.GET_PACKAGE_SIZE"/>
+    <uses-permission android:name="android.permission.RESTART_PACKAGES"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <!-- 添加访问GSP定位权限 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+            android:name="com.tianv.updis.UUApplication"
+            android:allowBackup="true"
+            android:icon="@drawable/icon"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.Store">
+        <activity
+                android:name="com.tianv.updis.activity.DefaultActivity"
+                android:label="@string/app_name"
+                android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="jpush.testAction"/>
+
+                <category android:name="jpush.testCategory"/>
+
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.INFO"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.tianv.updis.activity.MainActivityGroup"
+                android:label="@string/app_name"
+                android:screenOrientation="portrait"
+                android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.tianv.updis.activity.LoginActivity"
+                android:configChanges="keyboardHidden|keyboard|orientation"
+                android:launchMode="singleTask"
+                android:label="@string/app_name"
+                android:screenOrientation="portrait">
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+                android:name="com.tianv.updis.activity.CategoryMessageActivity"
+                android:configChanges="keyboardHidden|keyboard|orientation"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name="com.tianv.updis.activity.PersonnelMessageActivity"
+                android:configChanges="keyboardHidden|keyboard|orientation"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name="com.tianv.updis.activity.MyInformationActivity"
+                android:configChanges="keyboardHidden|keyboard|orientation"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name="com.tianv.updis.activity.CommonListActivity"
+                android:configChanges="keyboardHidden|keyboard|orientation"
+                android:label="@string/app_name">
+        </activity>
+
+        <activity
+                android:name="com.tianv.updis.activity.WebContentActivity"
+                android:configChanges="keyboardHidden|keyboard|orientation"
+                android:label="@string/app_name">
+        </activity>
+
+
+        <activity
+                android:name="com.tianv.updis.activity.CommonResourceDetailActivity"
+                android:configChanges="keyboardHidden|keyboard|orientation"
+                android:label="@string/app_name">
+        </activity>
+        <activity
+                android:name="com.tianv.updis.activity.SettingActivity"
+                android:configChanges="keyboardHidden|keyboard|orientation"
+                android:label="@string/app_name">
+        </activity>
+
+        <!-- Required SDK核心功能 -->
+        <activity
+                android:name="cn.jpush.android.ui.PushActivity"
+                android:configChanges="orientation|keyboardHidden"
+                android:theme="@android:style/Theme.Translucent.NoTitleBar">
+            <intent-filter>
+                <action android:name="cn.jpush.android.ui.PushActivity"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="com.tianv.updis"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".activity.CommonWebViewActivity"/>
+        <!-- Required  SDK核心功能 -->
+        <service
+                android:name="cn.jpush.android.service.DownloadService"
+                android:enabled="true"
+                android:exported="false">
+        </service>
+
+        <!-- Required SDK 核心功能 -->
+        <service
+                android:name="cn.jpush.android.service.PushService"
+                android:enabled="true"
+                android:exported="false">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTER"/>
+                <action android:name="cn.jpush.android.intent.REPORT"/>
+                <action android:name="cn.jpush.android.intent.PushService"/>
+                <action android:name="cn.jpush.android.intent.PUSH_TIME"/>
+            </intent-filter>
+        </service>
+
+        <!-- Required SDK核心功能 -->
+        <receiver
+                android:name="cn.jpush.android.service.PushReceiver"
+                android:enabled="true">
+            <intent-filter android:priority="1000">
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED_PROXY"/>
+                <!-- Required  显示通知栏 -->
+                <category android:name="com.tianv.updis"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.USER_PRESENT"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+            <!-- Optional -->
+            <intent-filter>
+                <action android:name="android.intent.action.PACKAGE_ADDED"/>
+                <action android:name="android.intent.action.PACKAGE_REMOVED"/>
+
+                <data android:scheme="package"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- Required SDK核心功能 -->
+        <receiver android:name="cn.jpush.android.service.AlarmReceiver"/>
+
+        <!-- User defined.  For test only  用户自定义的广播接收器 -->
+        <receiver
+                android:name="com.tianv.updis.MyReceiver"
+                android:enabled="true">
+            <intent-filter>
+                <action android:name="cn.jpush.android.intent.REGISTRATION"/>
+                <!-- Required  用户注册SDK的intent -->
+                <action android:name="cn.jpush.android.intent.UNREGISTRATION"/>
+                <action android:name="cn.jpush.android.intent.MESSAGE_RECEIVED"/>
+                <!-- Required  用户接收SDK消息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_RECEIVED"/>
+                <!-- Required  用户接收SDK通知栏信息的intent -->
+                <action android:name="cn.jpush.android.intent.NOTIFICATION_OPENED"/>
+                <!-- Required  用户打开自定义通知栏的intent -->
+                <category android:name="com.tianv.updis"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- Required  . Enable it you can get statistics data with channel -->
+        <meta-data
+                android:name="JPUSH_CHANNEL"
+                android:value="developer-default"/>
+        <meta-data
+                android:name="JPUSH_APPKEY"
+                android:value="f7ac7c23cb85d131df8102d5"/>
+        <!-- </>值来自开发者平台取得的AppKey -->
+
+    </application>
+
+</manifest>

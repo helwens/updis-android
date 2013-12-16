@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        android:gravity="center"
+        android:id="@+id/download_open_bar"
+        android:background="#ff0174c7"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+            android:id="@+id/d_open"
+            android:background="@drawable/resource_btn_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30.0dip"
+                android:src="@drawable/icon_start"
+                android:layout_centerVertical="true"/>
+
+        <TextView
+                android:text="@string/open"
+                android:layout_centerInParent="true"
+                style="@style/ResourceProgressOverlay.SMedium"/>
+    </RelativeLayout>
+</LinearLayout>

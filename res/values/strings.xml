@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+
+    <string name="app_name">UPDIS</string>
+    <string name="login_on_progress">正在载入...</string>
+    <!-- 分类消息顶部导航 -->
+    <string-array name="category_tab_text">
+        <item>通知</item>
+        <item>招投标信息</item>
+        <item>畅所欲言</item>
+        <item>业余生活</item>
+        <item>在谈项目</item>
+    </string-array>
+    <string-array name="push_time">
+        <item>开启</item>
+        <item>只在夜间开启</item>
+        <item>关闭</item>
+    </string-array>
+    <string-array name="push_time_value">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+    <!-- 人事相关顶部导航 -->
+    <string-array name="personnel_tab_text">
+        <item>人员查询</item>
+        <item>通讯录</item>
+    </string-array>
+
+    <!-- 我的信息顶部导航 -->
+    <string-array name="myinfo_tab_text">
+        <!--<item>密码修改</item>-->
+        <!--<item>个人信息</item>-->
+        <item>我发布的</item>
+        <item>发布信息</item>
+    </string-array>
+
+    <string name="setting_push_title">消息推送:</string>
+    <string name="setting_push_title_notice">通知</string>
+    <string name="setting_push_title_bidding">招投标信息</string>
+    <string name="setting_push_title_talk">畅所欲言</string>
+    <string name="setting_push_title_amateur">业余生活</string>
+    <string name="setting_push_title_project">在谈项目</string>
+    <string name="setting_push_time_title">后台消息提醒时段:</string>
+    <string name="setting_push_time_open">开启</string>
+    <string name="setting_push_time_night">只在夜间开启</string>
+    <string name="setting_push_time_close">关闭</string>
+    <string name="setting_about">关于</string>
+    <string name="setting_feekback">意见反馈</string>
+    <string name="setting_version">版本</string>
+    <string name="setting_check_version">检查更新</string>
+    <string name="bottom_nav_home">分类消息</string>
+    <string name="bottom_nav_category">人事相关</string>
+    <string name="bottom_nav_recommend">我的信息</string>
+    <string name="bottom_nav_manage">设置</string>
+    <string name="login_phonenum_tag">您的手机号码为</string>
+    <string name="login_sms_tag">请将短信中的验证码输入下框内</string>
+    <string name="login_verification_code">验证码:</string>
+    <string name="login_user_name">账号:</string>
+    <string name="login_user_pwd">密码:</string>
+    <string name="query_user_name">姓名:</string>
+    <string name="query_user_dept">部门:</string>
+    <string name="query_user_subject">专业:</string>
+    <string name="updis_confirm">确认</string>
+    <string name="updis_ok">确定</string>
+    <string name="updis_login">登录</string>
+    <string name="updis_query">查询</string>
+    <string name="updis_logout">退出</string>
+    <string name="updis_logout_confirm">确定退出UPDIS Android 版?</string>
+    <string name="updis_query_tips_name">姓名不能为空</string>
+    <string name="updis_query_tips_dept">请选择单位</string>
+    <string name="updis_query_tips_subject">请选择专业</string>
+    <string name="updis_login_tips_username">账号不能为空</string>
+    <string name="updis_login_tips_userpwd">密码不能为空</string>
+    <string name="updis_login_tips_unreg">设备未注册,请注册</string>
+    <string name="updis_login_logingerror_title">登录失败</string>
+    <string name="updis_login_tips_vercode">验证码不能为空</string>
+    <string name="updis_login_progress_tips">正在请求服务器...</string>
+
+
+    <string name="updis_sendmsg_tips_category">请选择分类</string>
+    <string name="updis_sendmsg_tips_title">标题不能为空</string>
+    <string name="updis_sendmsg_tips_content">内容不能为空</string>
+
+    <string name="updis_service_error_title">服务器连接出错</string>
+    <string name="updis_service_error_tip">服务器暂时无法连接,请稍后在试</string>
+
+    <string name="updis_need_reg">您没有登记手机号码,请登录内网个人信息修改页面添加手机号码后再登录.</string>
+
+    <string name="set_network">设置网络</string>
+    <string name="updis_network_error_title">无可用网络</string>
+    <string name="updis_network_error_tip">对不起，当前没有检测到可用网络，请重新连接或稍后再试！</string>
+    <string name="updis_view_related_list">相关阅读</string>
+    <string name="updis_view_comment_list">评论列表</string>
+    <string name="updis_view_comment_list_showall">查看全部</string>
+    <string name="updis_view_comment_list_write">说两句</string>
+    <string name="updis_change_pwd_now">当前密码:</string>
+    <string name="updis_change_pwd_new">新密码:</string>
+    <string name="updis_change_pwd_new2">重复新密码:</string>
+    <string name="updis_changepwd_nowpwd_tips">当前密码不能为空</string>
+    <string name="updis_changepwd_newpwd_tips">新密码不能为空</string>
+    <string name="updis_changepwd_newpwd2_tips">请重复新密码</string>
+    <string name="updis_changepwd_newpwderror_tips">新密码2次输入不一致</string>
+
+    <string name="updis_person_detail_dept">所在部门:</string>
+    <string name="updis_person_detail_birthday">出生日期:</string>
+    <string name="updis_person_detail_gender">性别:</string>
+    <string name="updis_person_detail_specialty">专业:</string>
+    <string name="updis_person_detail_educational">学历:</string>
+    <string name="updis_person_detail_degree">学位:</string>
+    <string name="updis_person_detail_graduationdate">毕业时间:</string>
+    <string name="updis_person_detail_entrydate">进院时间:</string>
+    <string name="updis_person_detail_rank">职级:</string>
+    <string name="updis_person_detail_titles">职称:</string>
+    <string name="updis_person_detail_mobilePhone">手机号码:</string>
+    <string name="updis_person_detail_officePhone">办公电话:</string>
+    <string name="updis_person_detail_homeNum">家庭电话:</string>
+    <string name="updis_person_detail_mail">电子邮件:</string>
+    <string name="updis_person_detail_resume">个人简历:</string>
+
+
+    <string name="updis_send_msg_category">分类:</string>
+    <string name="updis_send_msg_title">标题:</string>
+    <string name="updis_send_msg_content">内容:</string>
+    <string name="updis_send_msg_dept">部门:</string>
+
+
+
+    <string name="updis_anonymous">匿名</string>
+
+    <!-- 推荐宝典顶部导航的数组 -->
+    <string-array name="treasure_tab_text">
+        <item>专题集锦</item>
+        <item>用户推荐</item>
+    </string-array>
+    <!-- 管理顶部导航数组 -->
+    <string-array name="manage_tab_text">
+        <item>数据转移</item>
+        <item>下载列表</item>
+        <item>已装列表</item>
+        <item>更新列表</item>
+        <item>SD卡扫描</item>
+    </string-array>
+    <!-- 二级菜单导航的数组,recommend -->
+    <string-array name="ranking_page_nav_tab_text">
+        <item>最新排行</item>
+        <item>最热排行</item>
+    </string-array>
+    <string-array name="move_data_tab_text">
+        <item>移至SD卡</item>
+        <item>移至内存</item>
+    </string-array>
+    <string-array name="more_dowmload_count">
+        <item>1个</item>
+        <item>2个</item>
+        <item>3个</item>
+        <item>4个</item>
+        <item>5个</item>
+    </string-array>
+    <string-array name="more_dowmload_count_value">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+    </string-array>
+    <string-array name="feedback_type">
+        <item>功能意见</item>
+        <item>您的新需求</item>
+        <item>界面意见</item>
+        <item>操作意见</item>
+        <item>其它</item>
+    </string-array>
+    <!-- 省流量界面的提示语句 -->
+    <string-array name="randomText">
+        <item>"设置"中可打开"wifi自动下载",节省GPRS流量</item>
+        <item>想快速查找软件,进入"搜索"快速查找</item>
+        <item>喜欢的软件,"评论"一下吧</item>
+        <item>手机内存太满,试试"数据转移"</item>
+    </string-array>
+    <!-- shareActivity key 设置 -->
+    <string name="no_load_image_key">no_load_image_key</string>
+    <string name="download_set_key">download_set_key</string>
+    <string name="auto_download_task_key">auto_download_task_key</string>
+    <string name="auto_wifi_download_key">auto_wifi_download_key</string>
+    <string name="auto_install_key">auto_install_key</string>
+    <string name="remind_download_key">remind_download_key</string>
+    <string name="remind_update_key">remind_update_key</string>
+    <string name="delete_cache_key">delete_cache_key</string>
+    <!-- ****************************************************** -->
+    <string name="market_update_menu">市场更新</string>
+    <string name="local_software">本地软件</string>
+    <string name="apps_available_update">个应用软件可更新</string>
+    <string name="check_update_list">点击进入更新列表。</string>
+    <string name="apps_update_list">apps_update_list</string>
+    <string name="check_update_error">检查更新失败,请查看您的网络连接,或则稍后重新尝试!</string>
+    <string name="prompt_no_update">已是最新版本!</string>
+    <string name="prompt_check_upgrade">版本进行更新检测…</string>
+    <string name="feedback_update_prompt">我们会根据您的反馈, 及时的发布新版本.</string>
+    <string name="free_download">免费</string>
+    <string name="waiting">等待中</string>
+    <string name="ji_jie">我要推荐</string>
+    <string name="share">大家分享</string>
+    <string name="select_how_to_share">选择以下方式分享给好友</string>
+    <string name="more_new">最新上架</string>
+    <string name="top_seller">畅销排行</string>
+    <string name="search_hint">搜索精彩应用！</string>
+    <string name="search_keywords">大家都在搜索什么？</string>
+    <string name="more_keywords">更多热词</string>
+    <string name="failure_found">请输入符合内容，再继续搜索！</string>
+    <string name="error_search_in_progress">正在搜索，请稍后...</string>
+    <string name="move_to_sd">移至SD卡</string>
+    <string name="move_to_phone">移至内存</string>
+    <string name="calculate_size">正在计算中...</string>
+    <string name="uninstalled_app">卸载</string>
+    <string name="install_apk_text">安装</string>
+    <string name="select_all">全选</string>
+    <string name="select_quit">取消全选</string>
+    <string name="delete_all">从手机SD卡上删除选中APK文件,点击”确定“将删除？</string>
+    <string name="no_choice_apk">您未选择需要删除的APK文件</string>
+    <string name="confirm">确定</string>
+    <string name="cancel">取消</string>
+    <string name="delete_conform">您确定删除文件？</string>
+    <string name="prompt_on_application_exit_title">温馨提示</string>
+    <string name="confirm_null_btn">确\u0020\u0020\u0020\u0020\u0020\u0020定</string>
+    <string name="cancel_null_btn">取\u0020\u0020\u0020\u0020\u0020\u0020消</string>
+    <string name="catalog_search">本地APK查找目录</string>
+    <string name="up_one_level">..</string>
+    <string name="current_dir">.</string>
+    <string name="ignore_update">忽\u0020略</string>
+    <string name="new_version">新版：</string>
+    <string name="resource_detail">详情</string>
+    <string name="resource_evaluate">评论</string>
+    <string name="guess_like">猜你喜欢</string>
+    <string name="app_des">软件描述</string>
+    <string name="share_btn">分享</string>
+    <string name="report">举报</string>
+    <string name="version_library">版本库</string>
+    <string name="report_no_download">无法下载</string>
+    <string name="report_no_install">无法安装</string>
+    <string name="report_carry_virus">携带病毒</string>
+    <string name="report_content_error">内容有误</string>
+    <string name="report_harmful_mobile">对手机或数据有害</string>
+    <string name="report_version_update">版本需要更新</string>
+    <string name="report_other_problem">其他问题</string>
+    <string name="report_content">请填写举报内容，最多输入100字。</string>
+    <string name="tip_report">举报信息已提交,我们会尽快处理</string>
+    <string name="tip_feedback">反馈信息已提交,我们会尽快处理</string>
+    <string name="user">用户：</string>
+    <string name="user_comment">用户评论</string>
+    <string name="jijiedajia">我要推荐</string>
+    <string name="recommend">推荐</string>
+    <string name="unrecommend">不推荐</string>
+    <string name="post_comment">发表评论</string>
+    <string name="comment_hint">大家来评论,最多输入100字。</string>
+    <string name="submit">提交</string>
+    <string name="submint_content">提交的评论将及时为您处理...</string>
+    <string name="recomment_str">我会继续努力向前冲！</string>
+    <string name="unrecomment_str">我不会放弃努力！</string>
+    <string name="recommend_again_tip">不能进行频繁操作哦！</string>
+    <string name="change_str">换一换</string>
+    <string name="loading_on_progress">正在载入...</string>
+    <!-- ********************菜单设置*************** -->
+    <string name="set_flow">省流量设置</string>
+    <string name="no_image_set">无图片浏览设置</string>
+    <string name="image_flow_control">不加载图片，可以进行流量控制</string>
+    <string name="download_set">下载设置</string>
+    <string name="download_task_count">下载任务数量设置</string>
+    <string name="set_download_des">同时下载任务量：默认</string>
+    <string name="start_no_finish">启动时下载未完成任务</string>
+    <string name="download_install">下载完成任务自动安装</string>
+    <string name="remind">提醒</string>
+    <string name="remind_download">软件下载完成提醒</string>
+    <string name="remind_download_des">任务下载完成,显示安装提醒</string>
+    <string name="remind_update">软件可更新提醒</string>
+    <string name="remind_update_des">如果有更新应用，提醒通知</string>
+    <string name="delete_cache">清除缓存</string>
+    <string name="delete_all_cache">清除所有缓存文件</string>
+    <string name="same_time_download">最大同时下载数目</string>
+    <string name="search_no_result">抱歉,无搜索到相关内容,猜猜你喜欢?</string>
+    <string name="retrieving_apkurl_error">获取下载地址失败，请稍后再试！</string>
+    <string name="pause">暂停</string>
+    <string name="ready_download">已添加到下载列表...</string>
+    <string name="continues">继续</string>
+    <string name="installed">已安装</string>
+    <string name="open">打开</string>
+    <string name="install_invisible">安\u0020\u0020\u0020\u0020\u0020装</string>
+    <string name="start_invisible">打\u0020\u0020\u0020\u0020\u0020开</string>
+    <string name="more">更多</string>
+    <string name="update">更新</string>
+    <string name="upgrade">升级</string>
+    <string name="about">关于</string>
+    <string name="setting">设置</string>
+    <string name="feedback">反馈</string>
+    <string name="exit">退出</string>
+    <string name="wait_for_download">下载等待中...</string>
+    <string name="delete">删除</string>
+    <string name="refresh">刷新</string>
+    <string name="catalog">目录</string>
+    <string name="tip_count_apk">已经扫描%1$d个APK</string>
+    <string name="cancel_ignore">取消忽略</string>
+    <string name="update_all">全部更新</string>
+    <string name="ignore_all">全部忽略</string>
+    <string name="updatable_app">更新软件（%1$d）</string>
+    <string name="ignore_app">忽略更新（%1$d）</string>
+    <string name="count_downloading">下载中（%1$d）</string>
+    <string name="count_installable">下载完（%1$d）</string>
+    <string name="count_in_phone">安装在手机（%1$d）</string>
+    <string name="count_in_sdcard">安装在SD卡（%1$d）</string>
+    <string name="comment_version">版本：%1$s</string>
+    <string name="close">关闭</string>
+    <string name="size">大小</string>
+    <string name="downloadnum">%1$s次下载</string>
+    <string name="expansion">展开..</string>
+    <string name="fold">收起..</string>
+    <!-- 结束 -->
+    <string name="detail_txt_size">大小：%1$s</string>
+    <string name="detail_txt_level">星级：</string>
+    <string name="detail_txt_download">下载：%1$s次</string>
+    <string name="detail_txt_type">类型：%1$s</string>
+    <string name="detail_txt_update_time">更新：%1$s</string>
+    <string name="quit_delete">取消下载</string>
+    <string name="apk_z_size">占用大小</string>
+    <string name="installed_apk_count">已安装软件（%1$s）</string>
+    <string name="download_free">免费下载</string>
+    <string name="feedback_content">反馈内容：</string>
+    <string name="feedback_type">反馈类型：</string>
+    <string name="feedback_hint">您的意见将推动我们继续加油！最多输入100字。</string>
+    <!-- market更新页面 -->
+    <string name="update_market">更新</string>
+    <string name="update_version">版本:</string>
+    <string name="install_new">安装新版本</string>
+    <string name="try_again_text">重试</string>
+    <string name="no_networking_text">网络未连接</string>
+    <string name="check_networking">请检查网络情况</string>
+    <string name="click_try_again">点击重试,尝试重新连接网络!</string>
+    <string name="data_error">网络连接不稳定</string>
+    <string name="data_get">不给力的网路连接,需重新获取数据!</string>
+    <string name="prompt_exit">再次按返回键退出程序！</string>
+    <string name="no_content_sd">SD卡暂无扫描内容!</string>
+    <string name="no_data_move">暂无数据可转移</string>
+    <string name="to_recommend_text">点击“排行榜”查看!</string>
+    <string name="to_category_text">点击“分类”找找喜爱的应用</string>
+    <string name="installing">安装中</string>
+    <string name="tip_upgrade">升级温馨提示</string>
+    <string name="search_word_null">请您输入要搜索的内容!</string>
+    <string name="cache_clearing">缓存文件正在清理中…</string>
+    <string name="cache_cleared">缓存文件清理完成</string>
+    <string name="no_sd_ka">您没有安装SD卡!</string>
+    <string name="no_contenet_text">暂无内容显示</string>
+    <!-- download error text tips -->
+    <string name="pi_download_model_error">下载数据不完整,请重试.</string>
+    <string name="pi_download_url_error">文件下载地址不正确,请重试.</string>
+    <string name="pi_read_data_error">网络不稳定读取文件错误.</string>
+    <string name="pi_space_full_error">存储空间已满，请检查存储空间.</string>
+    <string name="pi_download_error">网络不稳定,下载失败,请重试.</string>
+    <string name="pi_no_sdcard_error">系统检测无SD卡，暂时无法下载，请插入SD卡.</string>
+
+    <!-- package installer 用到 -->
+    <string name="pi_installing">正在安装...</string>
+    <string name="pi_installed_ok">安装成功，点击打开.</string>
+    <string name="pi_download_done">下载完成</string>
+    <string name="pi_download_completed">下载完成，精彩应用等待安装！</string>
+    <string name="pi_waiting_in_task_queue">正在排队下载...</string>
+    <string name="pi_on_downloading">正在下载</string>
+    <string name="pi_all_app_downloading">%d个应用软件在下载！</string>
+    <string name="pi_app_downloading">%d个下载中</string>
+    <string name="pi_app_waiting">%d个等待中</string>
+    <string name="count_inputable">还可输入%d个字</string>
+    <string name="query_apk_tip">扫描APK文件,请稍候...</string>
+    <string name="strive_loading">努力加载,请稍候...</string>
+    <string name="tip_exit">您确定要退出\"%s\"吗？</string>
+    <string name="tip_exit_download">应用程序正在下载，退出将暂停下载！</string>
+    <string name="appliction_detail">应用详情</string>
+    <string name="wan">万</string>
+    <string name="yi">亿</string>
+    <string name="no_comment">请将您的评论分享给大家!</string>
+    <string name="about_version">版本信息：</string>
+    <string name="about_update">更新时间：</string>
+    <string name="no_keyword_tip">暂无关键字显示</string>
+    <string name="try_get_keyword">点击重试,尝试重新获取关键字</string>
+    <string name="tip_no_network">网络不给力，暂时无法提交</string>
+    <string name="query_detail">查看应用详情</string>
+    <string name="stop_download">暂停下载</string>
+    <string name="quit_download">取消下载</string>
+    <string name="continue_download">继续下载</string>
+    <string name="ignore_long_item">忽略</string>
+    <string name="apk_is_exists">安装包不存在,请重新下载!</string>
+    <string name="tip_invalid_input">请输入有效内容！</string>
+
+    <!-- Upgrade Layout -->
+    <string name="upgrade_downloading">状态：正在更新</string>
+    <string name="upgrade_title">市场更新信息</string>
+    <string name="upgrade_date">更新日期：</string>
+
+    <!-- AIRPUSH 的配置 BEGIN -->
+    <string name="ap_waiting_in_task_queue">正在排队下载......</string>
+    <string name="ap_download_done">下载完成</string>
+    <string name="ap_download_completed">下载完成，赶快安装体验吧！</string>
+    <string name="ap_on_downloading">正在下载</string>
+    <string name="ap_had_downloading_in_task">已添加到下载任务中</string>
+    <string name="ap_update_done">更新完成，请点击安装.</string>
+    <string name="ap_installing">正在安装，请稍等...</string>
+    <string name="ap_installed_ok">安装完成，点击打开.</string>
+    <string name="ap_desc_text">软件介绍</string>
+    <string name="ap_download_text">免费下载</string>
+    <string name="ap_close_text">关闭</string>
+    <string name="ap_error_loading_resources_title">提示</string>
+    <string name="ap_error_loading_resources_message">载入资源出错,请重试</string>
+    <string name="ap_try_again">重试</string>
+    <string name="ap_cancel">取消</string>
+    <string name="ap_start_downloading">开始下载:%s</string>
+    <string name="ap_download_model_error">下载数据不完整,请重试.</string>
+    <string name="ap_download_url_error">文件下载地址不正确,请重试.</string>
+    <string name="ap_read_data_error">读取文件不正确,请重试.</string>
+    <string name="ap_download_error">网络不稳定,下载失败,请重试.</string>
+    <string name="ap_no_sdcard_error">系统检测无SD卡，暂时无法下载，请插入SD卡.请重试.</string>
+    <string name="ap_detail_update_date">更新: %s</string>
+    <string name="ap_detail_version">版本: %s</string>
+    <string name="ap_detail_category">类型: %s</string>
+    <string name="ap_detail_size">大小: %s</string>
+    <string name="ap_detail_download_number">下载: %s 次</string>
+    <string name="ap_error_tips">亲,网络不给力,请查看网络!</string>
+    <string name="ap_no_net_work_tips">网络未连接,请您先"设置网络"!,然后"刷新"尝试连接</string>
+    <string name="ap_retry">重试</string>
+    <string name="ap_ok">确定</string>
+    <string name="ap_download_ok">下载完成</string>
+    <string name="ap_installed">已安装</string>
+    <string name="ap_apk_is_exists">安装包不存在,请重新下载!</string>
+    <string name="ap_ads_desc">用户还下载了</string>
+    <string name="change_ad">换一换</string>
+    <string name="desc_open">展开</string>
+    <string name="desc_close">收起</string>
+    <string name="ap_loading_on_progress">正在载入</string>
+    <string name="ap_set_net_work">设置网络</string>
+    <string name="ap_insert_error">下载数据插入数据库失败</string>
+    <string name="ap_all_app_downloading">%d个应用软件在下载！</string>
+    <string name="ap_app_downloading">%d个下载中</string>
+    <string name="ap_app_waiting">%d个等待中</string>
+    <string name="ap_app_pauseing">%d个暂停中</string>
+    <!-- AIRPUSH 的配置 END -->
+
+    <string name="donwload_percent_dialog">已经下载%1$s,取消下载将无法恢复,确定取消吗?</string>
+    <string name="friend_remind">友情提醒</string>
+    <string name="wait_again">再等等</string>
+    <string name="auto_wifi_download">wifi自动下载</string>
+    <string name="quit_auto_wifi_download">取消wifi自动下载</string>
+    <string name="key_hotword_syncronizing">isSyncing</string>
+    <string name="action_hotword_syncAction">com.uucun.android.cms.HOTWORD_SYNC</string>
+
+    <!-- 市场助手 BEGIN -->
+    <string name="aide_hi">Hi!我是小助手！</string>
+    <string name="aide_title">市场小助手设置</string>
+    <string name="aide_switch">小助手开关</string>
+    <string name="aide_msg_sound">消息提示音</string>
+    <string name="aide_show_sty">显示方式</string>
+    <string name="aide_show_key">aide_show_key</string>
+    <string name="aide_switch_key">aide_switch_key</string>
+    <string name="aide_msg_sound_key">aide_msg_sound_key</string>
+    <string name="aide_wakeup_title">市场小助手可以帮你找到更多免费、好玩的应用</string>
+    <string name="aide_enable">立即使用</string>
+    <string name="aide_disable">稍后再说</string>
+    <string name="aide_search">搜索</string>
+    <string name="aide_luck">试试手气</string>
+    <string name="aide_tasks">任务管理器</string>
+    <string name="aide_clear">全部清空</string>
+    <string name="aide_title_recommend">精品推荐</string>
+    <string name="aide_title_recent">常用软件</string>
+    <string name="aide_title_tips">我的消息</string>
+    <string name="aide_title_feedback">客户服务</string>
+    <string name="aide_feedback_tip">请输入您要反馈的问题：
+        <font color="#00FF00">(100个汉字以内)</font>
+    </string>
+    <string name="aide_feedback_ok">提交问题</string>
+    <string name="aide_recent_tip">最近使用软件，点击打开</string>
+    <string name="click_detail">点击详情</string>
+    <string name="aide_feedback_tip_2words">请至少输入两个字！</string>
+    <string name="aide_feedback_tip_succeed">提交成功，谢谢您的建议</string>
+    <string name="aide_tip_error">请检查您的网络问题，重新连接网络后点击刷新按钮</string>
+    <string name="aide_tip_nodata_error">精彩内容,敬请期待</string>
+    <string name="wap_check">当前联网方式为WAP,速度较慢,建议切换为NET方式</string>
+    <string name="change">切换</string>
+    <string name="edit_text_hint">请留下您的建议,我们将以此为动力不断改进!</string>
+    <string name="edit_count_limit">输入框只可输入100个汉字</string>
+
+    <string-array name="aide_show_style">
+        <item>仅在桌面显示</item>
+        <item>在所有界面显示</item>
+    </string-array>
+    <string-array name="aide_show_style_value">
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+    <!-- 市场助手 END -->
+    <string name="msg_fail">抱歉，亲，这条消息失效啦！</string>
+    <string name="updis_update_tips_updating">正在执行更新任务,请勿重复操作</string>
+
+</resources>
