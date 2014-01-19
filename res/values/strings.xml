@@ -495,5 +495,6 @@
     <!-- 市场助手 END -->
     <string name="msg_fail">抱歉，亲，这条消息失效啦！</string>
     <string name="updis_update_tips_updating">正在执行更新任务,请勿重复操作</string>
+    <string name="bottom_nav_project">项目</string>
 
 </resources>

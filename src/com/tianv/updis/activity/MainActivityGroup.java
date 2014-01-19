@@ -24,11 +24,11 @@ import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+
 import com.tianv.updis.Constant;
 import com.tianv.updis.R;
 import com.tianv.updis.task.UpdateApp;
 import com.uucun.android.sharedstore.SharedStore;
-import com.uucun.android.utils.apkinfo.ApkUtils;
 
 /**
  * @author Wang Baoxi
@@ -50,18 +50,19 @@ public class MainActivityGroup extends ActivityGroup {
     // 网络连接类型 gprs
     public static final int GPRS = 3;
 
+
     public static int aBottomNavIcons[] = {
-            R.drawable.icon_1, R.drawable.icon_2, R.drawable.icon_3, R.drawable.icon_4
+            R.drawable.icon_1, R.drawable.icon_2, R.drawable.icon_3, R.drawable.icon_4, R.drawable.icon_4
     };
 
     private static int aBottomNavHLIcons[] = {
-            R.drawable.icon_1_h, R.drawable.icon_2_h, R.drawable.icon_3_h, R.drawable.icon_4_h
+            R.drawable.icon_1_h, R.drawable.icon_2_h, R.drawable.icon_3_h, R.drawable.icon_4_h, R.drawable.icon_4_h
     };
 
     @SuppressWarnings("rawtypes")
     public static Class mTabClassArray[] = {
             CategoryMessageActivity.class, PersonnelMessageActivity.class,
-            MyInformationActivity.class, SettingActivity.class
+            MyInformationActivity.class, ProjectListActivity.class,SettingActivity.class
     };
 
     private final int NAVIGATOR_HOME = 0;
@@ -70,7 +71,9 @@ public class MainActivityGroup extends ActivityGroup {
 
     private final int NAVIGATOR_RECOMMEND = 2;
 
-    private final int NAVIGATOR_MANAGE = 3;
+    private static final int NAVIGATOR_PROJECT = 3;
+
+    private final int NAVIGATOR_MANAGE = 4;
 
     /**
      * 装载内容的容器
@@ -110,10 +113,11 @@ public class MainActivityGroup extends ActivityGroup {
      */
     private void init() {
         container = (LinearLayout) findViewById(R.id.container_layout);
-        bottomNavigate = new TextView[4];
+        bottomNavigate = new TextView[5];
         bottomNavigate[NAVIGATOR_HOME] = (TextView) findViewById(R.id.bottom_nav_home);
         bottomNavigate[NAVIGATOR_CATEGORY] = (TextView) findViewById(R.id.bottom_nav_category);
         bottomNavigate[NAVIGATOR_RECOMMEND] = (TextView) findViewById(R.id.bottom_nav_recommend);
+        bottomNavigate[NAVIGATOR_PROJECT] = (TextView) findViewById(R.id.bottom_nav_project);
         bottomNavigate[NAVIGATOR_MANAGE] = (TextView) findViewById(R.id.bottom_nav_manage);
         View.OnClickListener navigateClickListener = getNavigateClickListener();
         for (TextView view : bottomNavigate) {

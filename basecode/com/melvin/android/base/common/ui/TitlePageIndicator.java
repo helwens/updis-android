@@ -42,6 +42,7 @@ public class TitlePageIndicator extends View implements PageIndicator {
      * 10% between the center and an edge.
      */
     private static final float BOLD_FADE_PERCENTAGE = 0.15f;
+    private Context mContext;
 
     /**
      * Interface for a callback when the center item has been clicked.
@@ -133,16 +134,19 @@ public class TitlePageIndicator extends View implements PageIndicator {
 
     public TitlePageIndicator(Context context) {
         this(context, null);
+        mContext = context;
     }
 
     public TitlePageIndicator(Context context, AttributeSet attrs) {
         this(context, attrs, context.getResources().getIdentifier("vpiTitlePageIndicatorStyle",
                 RFileUtil.ATTRS, context.getPackageName()));
+        mContext = context;
     }
 
     public TitlePageIndicator(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs, defStyle);
         // Load defaults from resources
+        mContext = context;
         final Resources res = getResources();
         String packageName = this.mContext.getPackageName();
         RFileUtil fileUtil = RFileUtil.getInstance(context.getPackageName());

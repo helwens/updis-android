@@ -11,13 +11,14 @@ package com.melvin.android.base.activity;
 
 import android.content.Intent;
 import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.OnPageChangeListener;
-import cn.jpush.android.api.InstrumentedActivity;
+
 import com.melvin.android.base.adapter.UUFragmentPageAdapter;
 import com.melvin.android.base.common.ui.PageIndicator;
 import com.melvin.android.base.common.ui.TabPageIndicator;
 import com.melvin.android.base.fragment.UUFragment;
 import com.uucun.android.logger.Logger;
+
+import cn.jpush.android.api.InstrumentedActivity;
 
 public class BaseFragmentActivity extends InstrumentedActivity implements TabPageIndicator.CustClickListener {
 
@@ -44,7 +45,7 @@ public class BaseFragmentActivity extends InstrumentedActivity implements TabPag
      */
     protected void initPageChange() {
         ((TabPageIndicator) mIndicator).setCustClickListener(this);
-        mIndicator.setOnPageChangeListener(new OnPageChangeListener() {
+        mIndicator.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             public void onPageSelected(int arg0) {
                 changePage();
             }

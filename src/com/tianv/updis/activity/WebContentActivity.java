@@ -2,6 +2,8 @@ package com.tianv.updis.activity;
 
 import android.app.Activity;
 import android.app.ProgressDialog;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
@@ -11,6 +13,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
+
 import com.melvin.android.base.common.ui.MessageDialog;
 import com.melvin.android.base.task.AsyncMockTask;
 import com.tianv.updis.AppException;
@@ -20,6 +23,7 @@ import com.tianv.updis.task.CommonFetchDataTask;
 import com.tianv.updis.task.TaskCallBack;
 import com.uucun.android.logger.Logger;
 import com.uucun.android.sharedstore.SharedStore;
+
 import org.apache.http.util.EncodingUtils;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -111,6 +115,17 @@ public class WebContentActivity extends Activity implements View.OnTouchListener
         };
     }
 
+    public String getVersionName() {
+        try {
+            PackageManager pm = getPackageManager();
+            PackageInfo pi = pm.getPackageInfo(getPackageName(), 0);
+            return pi.versionName;
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+            return "";
+        }
+    }
+
     public void setPageData(JSONObject jsonObject) {
         String templateStr = null;
         try {
@@ -133,11 +148,8 @@ public class WebContentActivity extends Activity implements View.OnTouchListener
             }
         }
         if (fileName.equals("version.html")) {
-            try {
-                templateStr = templateStr.replace("$version", jsonObject.getString("releaseVersion").toString());
-            } catch (JSONException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-            }
+            String versionName = getVersionName();
+            templateStr = templateStr.replace("$version", versionName);
         }
 
         Logger.i("temp", templateStr);

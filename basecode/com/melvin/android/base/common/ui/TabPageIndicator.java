@@ -59,9 +59,11 @@ public class TabPageIndicator extends HorizontalScrollView implements PageIndica
     int mMaxTabWidth;
 
     private int mSelectedTabIndex;
+    private Context mContext;
 
     public TabPageIndicator(Context context) {
         this(context, null);
+        mContext = context;
     }
 
     public void setCustClickListener(CustClickListener listener) {
@@ -74,6 +76,7 @@ public class TabPageIndicator extends HorizontalScrollView implements PageIndica
 
     public TabPageIndicator(Context context, AttributeSet attrs) {
         super(context, attrs);
+        mContext = context;
         setHorizontalScrollBarEnabled(false);
         setSmoothScrollingEnabled(true);
         setHorizontalFadingEdgeEnabled(false);
