@@ -160,7 +160,7 @@ public class LoginActivity extends Activity implements OnClickListener {
         mProgressDialog.setProgressStyle(0);
         String msg = getResources().getString(R.string.updis_login_progress_tips);
         mProgressDialog.setMessage(msg);
-        mProgressDialog.setIndeterminate(true);
+        mProgressDialog.setIndeterminate(true);//123
         mProgressDialog.setCancelable(false);
         mProgressDialog.show();
     }
