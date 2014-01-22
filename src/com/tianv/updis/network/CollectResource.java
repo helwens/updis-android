@@ -163,6 +163,67 @@ public class CollectResource {
     }
 
     /**
+     * 获取projectlist
+     */
+
+    public ArrayList<CommentModel> fetchProjectList(Map<String, String> paramsMap) throws AppException {
+
+        String result = null;
+        ArrayList<CommentModel> resourceList = null;
+        String url = null;
+        String fileName = null;
+        url = Constant.MAIN_DOMAIN + Constant.INTERFACE_FETCH_PROJECTLIST;
+
+        String projectListValue = paramsMap.get(Constant.UrlAlias.PARAMS_KEY_PROJECTLIST);
+
+
+        try {
+            if (paramsMap == null) {
+                return null;
+            }
+
+            UUNetWorkServer uunetWorkServer = new UUNetWorkServer(mContext, ConnectionType.URLCON);
+            // 列表数据接口
+
+            String firstCookie = sharedStore.getString("login_cookies", "");
+            uunetWorkServer.addHeader("Cookie", firstCookie);
+            uunetWorkServer.setRequestType(RequestType.GET);
+            RequestParams requestParams = new RequestParams();
+
+            String uuid = DeviceInfo.getMacAddress(mContext);
+            if (UIUtilities.isNull(uuid)) {
+                uuid = "000000";
+            }
+            requestParams.put(Constant.UrlAlias.PARAMS_KEY_PROJECTLIST, projectListValue);
+
+            uunetWorkServer.setRequestParams(requestParams);
+            String[] bsting = uunetWorkServer.startSynchronous(url);
+            if (bsting != null) {
+                Logger.d("UrlconPostStreamsynTest code ", bsting[0]);
+                Logger.d("UrlconPostStreamsynTest content ", bsting[1]);
+                result = bsting[1];
+            }
+            if (result == null) {
+                return null;
+            }
+            resourceList = jsonDataParser.getProjectList(result, pageFetch);
+        } catch (ConnectionException e) {
+            //read from cache
+            throw new AppException(AppException.CONNECTION_CMS_ERROR_CODE, e.getMessage());
+        } catch (JSONException e) {
+            if (result.contains("sessionTimeout")) {
+                throw new AppException(AppException.LOGIN_TIME_OUT, e.getMessage());
+            } else {
+                throw new AppException(AppException.PARSE_DATA_ERROR_CODE, e.getMessage());
+            }
+        } catch (Exception e) {
+            throw new AppException(AppException.UN_KNOW_ERROR_CODE, e.getMessage());
+
+        }
+        return resourceList;
+    }
+
+    /**
      * 提交评论
      *
      * @param paramsMap
