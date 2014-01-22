@@ -37,6 +37,7 @@ public class ReLoginTask {
     public void login() {
         String userName = sharedStore.getString(Constant.UPDIS_STORE_KEY_USERNAME, "");
         String userPwd = sharedStore.getString(Constant.UPDIS_STORE_KEY_USERPWD, "");
+        String plainTextPassword = sharedStore.getString(Constant.UPDIS_STORE_KEY_PLAINTEXTPASSWORD, "");
         if (loginTask == null || loginTask.getStatus() == AsyncMockTask.Status.FINISHED) {
             Map<String, String> params = new HashMap<String, String>();
 
@@ -45,6 +46,7 @@ public class ReLoginTask {
 
             params.put(Constant.UrlAlias.PARAMS_KEY_USERNAME, userName);
             params.put(Constant.UrlAlias.PARAMS_KEY_USERPWD, userPwd);
+            params.put(Constant.UrlAlias.PARAMS_KEY_PLAINTEXTPASSWORD, plainTextPassword);
             params.put(Constant.UrlAlias.PARAMS_KEY_VERCODE, "");
             params.put(Constant.UrlAlias.PARAMS_KEY_PHONENUM, "");
             loginTask = new LoginTask(mContext,

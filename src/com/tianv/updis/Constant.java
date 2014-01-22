@@ -10,6 +10,7 @@ package com.tianv.updis;
  */
 public class Constant {
 
+    public static final String UPDIS_STORE_KEY_PLAINTEXTPASSWORD = "updis_store_key_plaintextpassword";
     public static String COOKIES = "";
     /**
      * 一小时
@@ -170,6 +171,7 @@ public class Constant {
          */
         public static final String PARAMS_KEY_NEWPWD = "newpwd";
 
+        public static final String PARAMS_KEY_PLAINTEXTPASSWORD = "plainTextPassword";
     }
 
     public static final String CACHE_DIR_KEY = "cache_dir_key";

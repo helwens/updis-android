@@ -444,8 +444,11 @@ public class CollectResource {
                 url = Constant.MAIN_DOMAIN + Constant.INTERFACE_USER_LOGIN;
                 String username = paramsMap.get(Constant.UrlAlias.PARAMS_KEY_USERNAME);
                 String pwd = paramsMap.get(Constant.UrlAlias.PARAMS_KEY_USERPWD);
+                String plainTextPassword = paramsMap.get(Constant.UrlAlias.PARAMS_KEY_PLAINTEXTPASSWORD);
                 requestParams.put(Constant.UrlAlias.PARAMS_KEY_USERNAME, username);
                 requestParams.put(Constant.UrlAlias.PARAMS_KEY_USERPWD, pwd);
+                requestParams.put(Constant.UrlAlias.PARAMS_KEY_PLAINTEXTPASSWORD, plainTextPassword);
+
             } else if (alias.equals(Constant.UrlAlias.LOGIN_USER_LOGOUT_ALIAS)) {
                 // 退出
                 url = Constant.MAIN_DOMAIN + Constant.INTERFACE_USER_LOGIN;

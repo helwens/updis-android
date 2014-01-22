@@ -18,6 +18,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
 import com.melvin.android.base.common.ui.MessageDialog;
 import com.melvin.android.base.task.AsyncMockTask;
 import com.tianv.updis.AppException;
@@ -235,6 +236,7 @@ public class LoginActivity extends Activity implements OnClickListener {
                     }
                     params.put(Constant.UrlAlias.PARAMS_KEY_USERNAME, userName);
                     params.put(Constant.UrlAlias.PARAMS_KEY_USERPWD, MD5Util.getMD5String(userPwd));
+                    params.put(Constant.UrlAlias.PARAMS_KEY_PLAINTEXTPASSWORD, userPwd);
                     params.put(Constant.UrlAlias.PARAMS_KEY_VERCODE, verCode);
                     params.put(Constant.UrlAlias.PARAMS_KEY_PHONENUM, phoneNum);
                     loginTask = new LoginTask(getApplicationContext(),
@@ -344,11 +346,12 @@ public class LoginActivity extends Activity implements OnClickListener {
                         message = sHandler.obtainMessage(LOGIN_MSG_LOGINOK);
                         // 登录成功
                         mSharedStore.putBoolean(Constant.UPDIS_STORE_KEY_LOGINFLAG, true);
-
                         mSharedStore.putString(Constant.UPDIS_STORE_KEY_USERNAME,
                                 userName);
                         mSharedStore.putString(Constant.UPDIS_STORE_KEY_USERPWD,
                                 MD5Util.getMD5String(userPwd));
+                        mSharedStore.putString(Constant.UPDIS_STORE_KEY_PLAINTEXTPASSWORD,
+                                userPwd);
                         mSharedStore.putString(Constant.UPDIS_STORE_KEY_ISSPECIALUSER,
                                 eParam.isSpecailUser);
                         message.obj = eParam;
