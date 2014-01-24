@@ -236,4 +236,30 @@
         <item name="android:textSize">20sp</item>
     </style>
 
+    <style name="project_info_left" parent="@style/ResourceDetailsLabel.Large">
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginLeft">@dimen/margin_horizontal</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="project_info_right" parent="@style/ResourceDetailsLabel.Large">
+        <item name="android:layout_marginRight">@dimen/margin_horizontal</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="project_info_layout">
+        <item name="android:background">@drawable/shape_bg</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_marginLeft">@dimen/margin_horizontal</item>
+        <item name="android:layout_marginRight">@dimen/margin_horizontal</item>
+        <item name="android:layout_marginTop">@dimen/margin_vertical</item>
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_height">@dimen/normal_height</item>
+    </style>
+
 </resources>

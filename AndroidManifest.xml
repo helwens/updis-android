@@ -92,6 +92,16 @@
             </intent-filter>
         </activity>
         <activity
+            android:name="com.tianv.updis.activity.ProjectListActivity"
+            android:configChanges="keyboardHidden|keyboard|orientation"
+            android:label="@string/app_name">
+        </activity>
+        <activity
+            android:name="com.tianv.updis.activity.ProjectInfoActivity"
+            android:configChanges="keyboardHidden|keyboard|orientation"
+            android:label="@string/app_name">
+        </activity>
+        <activity
                 android:name="com.tianv.updis.activity.CategoryMessageActivity"
                 android:configChanges="keyboardHidden|keyboard|orientation"
                 android:label="@string/app_name">

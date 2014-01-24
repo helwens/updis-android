@@ -216,6 +216,9 @@ public class MainActivityGroup extends ActivityGroup {
                     case R.id.bottom_nav_recommend:
                         switchActivity(NAVIGATOR_RECOMMEND);
                         break;
+                    case R.id.bottom_nav_project:
+                        switchActivity(NAVIGATOR_PROJECT);
+                        break;
                     case R.id.bottom_nav_manage:
                         switchActivity(NAVIGATOR_MANAGE, 1);
                         break;

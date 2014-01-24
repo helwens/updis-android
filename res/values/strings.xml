@@ -496,5 +496,7 @@
     <string name="msg_fail">抱歉，亲，这条消息失效啦！</string>
     <string name="updis_update_tips_updating">正在执行更新任务,请勿重复操作</string>
     <string name="bottom_nav_project">项目</string>
+    <string name="project_list">项目列表</string>
+    <string name="data_empty">对不起，加载数据为空</string>
 
 </resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="item_project_height">50dp</dimen>
+    <dimen name="normal_height">50dp</dimen>
+</resources>

@@ -2,11 +2,22 @@
 package com.tianv.updis.network;
 
 import android.content.Context;
+
 import com.tianv.updis.Constant;
-import com.tianv.updis.model.*;
+import com.tianv.updis.model.CommentModel;
+import com.tianv.updis.model.DictionaryModel;
+import com.tianv.updis.model.JsonConst;
+import com.tianv.updis.model.LoginDataModel;
+import com.tianv.updis.model.PersonModel;
+import com.tianv.updis.model.ProjectModel;
+import com.tianv.updis.model.ResourceDetailModel;
+import com.tianv.updis.model.ResourceModel;
+import com.tianv.updis.model.UIUtilities;
 import com.tianv.updis.network.CollectResource.PageFetcher;
 import com.uucun.android.data.query.Select;
+import com.uucun.android.data.util.Log;
 import com.uucun.android.utils.date.DateUtil;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -480,5 +491,53 @@ public class JsonDataParser {
             throw e;
         }
         return arrayList.isEmpty() ? null : arrayList;
+    }
+
+    public ArrayList<ProjectModel> getProjectList(String result, PageFetcher pageFetch) {
+        if (result == null || result.trim().equals("")) {
+            return null;
+        }
+        ArrayList<ProjectModel> arrayList = new ArrayList<ProjectModel>();
+        try {
+
+            JSONObject jsonObj = new JSONObject(result);
+            if (jsonObj.has("success")
+                    && jsonObj.getString("success").equals("1")
+                    && jsonObj.has("data")) {
+                JSONArray ja = jsonObj.getJSONArray("data");
+                for (int i = 0; i < ja.length(); i++) {
+                    JSONObject pjo = ja.getJSONObject(i);
+                    //{"projectId":3489,"projectNumber":"2345","projectName":"其实地方规划局考虑",
+                    // "partyAName":"shen深圳市龙岗政府采购中心","designDepartment":"院部",
+                    // "projectLeaders":["贝思琪","丁年","丁淑芳"],"projectScale":"sss"}
+                    ProjectModel pm = new ProjectModel();
+                    pm.setProjectId(getStringValue(pjo, "projectId"));
+                    pm.setProjectNumber(getStringValue(pjo, "projectNumber"));
+                    pm.setProjectName(getStringValue(pjo, "projectName"));
+                    pm.setPartyAName(getStringValue(pjo, "partyAName"));
+//                    String partyNames[] = pm.getPartyAName().split(",");
+//                    for (int j = 0; j < partyNames.length; j++) {
+//
+//                    }
+                    pm.setDesignDepartment(getStringValue(pjo, "designDepartment"));
+                    pm.setProjectLeaders(getStringValue(pjo, "projectLeaders"));
+                    pm.setProjectScale(getStringValue(pjo, "projectScale"));
+                    arrayList.add(pm);
+                }
+            }
+
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return arrayList.isEmpty() ? null : arrayList;
+    }
+
+    protected static String getStringValue(JSONObject obj, String key) throws JSONException {
+        if (obj.has(key)) {
+            return obj.getString(key);
+        } else {
+            Log.d("sorry, the key [" + key + "] is nnnnullllll");
+            return "";
+        }
     }
 }

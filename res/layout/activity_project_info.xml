@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="@drawable/bg_2"
+    android:layout_height="match_parent">
+    <RelativeLayout style="@style/project_info_layout">
+        <TextView
+            android:text="asdf"
+            style="@style/project_info_left" />
+        <TextView
+            android:text="asdf"
+            android:id="@+id/project_name"
+            style="@style/project_info_right" />
+        </RelativeLayout>
+
+    <RelativeLayout style="@style/project_info_layout">
+        <TextView
+            android:text="asdf"
+            style="@style/project_info_left" />
+        <TextView
+            android:text="asdfaasdfasdfa"
+            android:id="@+id/project_id"
+            style="@style/project_info_right" />
+    </RelativeLayout>
+    <RelativeLayout style="@style/project_info_layout">
+        <TextView
+            android:text="asdf"
+            style="@style/project_info_left" />
+        <TextView
+            android:text="asdf"
+            android:id="@+id/project_num"
+            style="@style/project_info_right" />
+    </RelativeLayout>
+    <RelativeLayout style="@style/project_info_layout">
+        <TextView
+            android:text="asdf"
+            style="@style/project_info_left" />
+        <TextView
+            android:text="asdf"
+            android:id="@+id/party_name"
+            style="@style/project_info_right" />
+    </RelativeLayout>
+    <RelativeLayout style="@style/project_info_layout">
+        <TextView
+            android:text="asdf"
+            style="@style/project_info_left" />
+        <TextView
+            android:text="asdf"
+            android:id="@+id/designDepartment"
+            style="@style/project_info_right" />
+    </RelativeLayout>
+    <RelativeLayout style="@style/project_info_layout">
+        <TextView
+            android:text="asdf"
+            style="@style/project_info_left" />
+        <TextView
+            android:text="asdf"
+            android:id="@+id/projectLeaders"
+            style="@style/project_info_right" />
+    </RelativeLayout>
+
+
+    <RelativeLayout style="@style/project_info_layout">
+        <TextView
+            android:text="asdf"
+            style="@style/project_info_left" />
+        <TextView
+            android:text="asdf"
+            android:id="@+id/projectScale"
+            style="@style/project_info_right" />
+    </RelativeLayout>
+</LinearLayout>

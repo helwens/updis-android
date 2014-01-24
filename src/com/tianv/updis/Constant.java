@@ -11,6 +11,8 @@ package com.tianv.updis;
 public class Constant {
 
     public static final String UPDIS_STORE_KEY_PLAINTEXTPASSWORD = "updis_store_key_plaintextpassword";
+    public static final String INTERFACE_FETCH_PROJECTLIST = "/project/getPendingProjects";
+    public static final String EXTRA_PROJECTMODEL = "extraProjectModel";
     public static String COOKIES = "";
     /**
      * 一小时
@@ -241,7 +243,7 @@ public class Constant {
     public static final String UPDIS_DIC_KEY_SUBJECT = "subject_key";
 
     //debug 8081 8010
-    public static final String MAIN_DOMAIN = "http://phone.updis.cn:8010/rest";
+    public static final String MAIN_DOMAIN = "http://phone.updis.cn:8081/rest";
 
     /**
      * 列表数据接口

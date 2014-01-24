@@ -3,9 +3,17 @@ package com.tianv.updis.network;
 
 import android.app.Activity;
 import android.content.Context;
+
 import com.tianv.updis.AppException;
 import com.tianv.updis.Constant;
-import com.tianv.updis.model.*;
+import com.tianv.updis.model.CommentModel;
+import com.tianv.updis.model.DictionaryModel;
+import com.tianv.updis.model.LoginDataModel;
+import com.tianv.updis.model.PersonModel;
+import com.tianv.updis.model.ProjectModel;
+import com.tianv.updis.model.ResourceDetailModel;
+import com.tianv.updis.model.ResourceModel;
+import com.tianv.updis.model.UIUtilities;
 import com.uucun.android.logger.Logger;
 import com.uucun.android.sharedstore.SharedStore;
 import com.uucun.android.utils.deviceinfo.DeviceInfo;
@@ -15,6 +23,7 @@ import com.uucun.android.uunetwork.exception.ConnectionException;
 import com.uucun.android.uunetwork.httptools.RequestParams;
 import com.uucun.android.uunetwork.model.ConnectionType;
 import com.uucun.android.uunetwork.model.RequestType;
+
 import org.json.JSONException;
 
 import java.io.ByteArrayOutputStream;
@@ -166,22 +175,15 @@ public class CollectResource {
      * 获取projectlist
      */
 
-    public ArrayList<CommentModel> fetchProjectList(Map<String, String> paramsMap) throws AppException {
+    public ArrayList<ProjectModel> fetchProjectList(PageFetcher pageFetch) throws AppException {
 
         String result = null;
-        ArrayList<CommentModel> resourceList = null;
+        ArrayList<ProjectModel> resourceList = null;
         String url = null;
         String fileName = null;
         url = Constant.MAIN_DOMAIN + Constant.INTERFACE_FETCH_PROJECTLIST;
-
-        String projectListValue = paramsMap.get(Constant.UrlAlias.PARAMS_KEY_PROJECTLIST);
-
-
+//        String projectListValue = paramsMap.get(Constant.UrlAlias.PARAMS_KEY_PROJECTLIST);
         try {
-            if (paramsMap == null) {
-                return null;
-            }
-
             UUNetWorkServer uunetWorkServer = new UUNetWorkServer(mContext, ConnectionType.URLCON);
             // 列表数据接口
 
@@ -194,7 +196,7 @@ public class CollectResource {
             if (UIUtilities.isNull(uuid)) {
                 uuid = "000000";
             }
-            requestParams.put(Constant.UrlAlias.PARAMS_KEY_PROJECTLIST, projectListValue);
+//            requestParams.put(Constant.UrlAlias.PARAMS_KEY_PROJECTLIST, projectListValue);
 
             uunetWorkServer.setRequestParams(requestParams);
             String[] bsting = uunetWorkServer.startSynchronous(url);
@@ -210,12 +212,6 @@ public class CollectResource {
         } catch (ConnectionException e) {
             //read from cache
             throw new AppException(AppException.CONNECTION_CMS_ERROR_CODE, e.getMessage());
-        } catch (JSONException e) {
-            if (result.contains("sessionTimeout")) {
-                throw new AppException(AppException.LOGIN_TIME_OUT, e.getMessage());
-            } else {
-                throw new AppException(AppException.PARSE_DATA_ERROR_CODE, e.getMessage());
-            }
         } catch (Exception e) {
             throw new AppException(AppException.UN_KNOW_ERROR_CODE, e.getMessage());
 
