@@ -506,5 +506,6 @@
     <string name="designDepartment">设计部门</string>
     <string name="project_leaders">项目负责人</string>
     <string name="projectScale">项目规模</string>
+    <string name="version_maohao">版本:%1$s</string>
 
 </resources>

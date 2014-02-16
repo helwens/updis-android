@@ -52,11 +52,11 @@ public class MainActivityGroup extends ActivityGroup {
 
 
     public static int aBottomNavIcons[] = {
-            R.drawable.icon_1, R.drawable.icon_2, R.drawable.icon_3, R.drawable.icon_4, R.drawable.icon_4
+            R.drawable.icon_1, R.drawable.icon_2, R.drawable.icon_3, R.drawable.icon_4, R.drawable.icon_5
     };
 
     private static int aBottomNavHLIcons[] = {
-            R.drawable.icon_1_h, R.drawable.icon_2_h, R.drawable.icon_3_h, R.drawable.icon_4_h, R.drawable.icon_4_h
+            R.drawable.icon_1_h, R.drawable.icon_2_h, R.drawable.icon_3_h, R.drawable.icon_4_h, R.drawable.icon_5_h
     };
 
     @SuppressWarnings("rawtypes")

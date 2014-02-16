@@ -57,7 +57,7 @@
                 android:layout_marginTop="5.0dip"
                 android:layout_marginBottom="5.0dip"
                 android:text="@string/bottom_nav_project"
-                android:drawableTop="@drawable/icon_4"
+                android:drawableTop="@drawable/icon_5"
                 style="@style/bottom_navigate_text" />
 
             <TextView
@@ -65,7 +65,7 @@
                 android:layout_marginTop="5.0dip"
                 android:layout_marginBottom="5.0dip"
                 android:text="@string/bottom_nav_manage"
-                android:drawableTop="@drawable/icon_4"
+                android:drawableTop="@drawable/icon_5"
                 style="@style/bottom_navigate_text" />
         </LinearLayout>
     </RelativeLayout>

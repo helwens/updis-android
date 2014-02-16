@@ -141,11 +141,8 @@ public class WebContentActivity extends Activity implements View.OnTouchListener
             e.printStackTrace();
         }
         if (fileName.equals("about.html")) {
-            try {
-                templateStr = templateStr.replace("$about", jsonObject.getString("aboutContent").toString());
-            } catch (JSONException e) {
-                e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-            }
+//                templateStr = templateStr.replace("$about", jsonObject.getString("aboutContent").toString());
+            templateStr = templateStr.replace("$about", getString(R.string.version_maohao, getVersionName()));
         }
         if (fileName.equals("version.html")) {
             String versionName = getVersionName();
