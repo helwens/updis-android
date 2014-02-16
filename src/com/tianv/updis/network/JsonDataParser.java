@@ -501,6 +501,8 @@ public class JsonDataParser {
         try {
 
             JSONObject jsonObj = new JSONObject(result);
+//            JSONObject jsonObj = new JSONObject("{\"data\":[{\"projectId\":3489,\"projectNumber\":\"2345\"," +
+//                    "\"projectName\":\"其实地方规划局考虑\",\"partyAName\":\"shen深圳市龙岗政府采购中心\",\"designDepartment\":\"院部\",\"projectLeaders\":[\"贝思琪\",\"丁年\",\"丁淑芳\"],\"projectScale\":\"sss\"},{\"projectId\":3488,\"projectNumber\":\"\",\"projectName\":\"是地方\",\"partyAName\":\"\",\"designDepartment\":\"\",\"projectLeaders\":[],\"projectScale\":\"\"}],\"success\":1}");
             if (jsonObj.has("success")
                     && jsonObj.getString("success").equals("1")
                     && jsonObj.has("data")) {
@@ -520,7 +522,16 @@ public class JsonDataParser {
 //
 //                    }
                     pm.setDesignDepartment(getStringValue(pjo, "designDepartment"));
-                    pm.setProjectLeaders(getStringValue(pjo, "projectLeaders"));
+                    JSONArray la = pjo.getJSONArray("projectLeaders");
+                    if (la != null && la.length() > 0) {
+                        String leaderStr = "";
+                        for (int j = 0; j < la.length(); j++) {
+                            String leaderOne = (String) la.getString(j);
+                            leaderStr = leaderStr + leaderOne + (j == la.length() - 1 ? "" : ",");
+                        }
+                        pm.setProjectLeaders(leaderStr);
+                    }
+//                    pm.setProjectLeaders(getStringValue(pjo, "projectLeaders"));
                     pm.setProjectScale(getStringValue(pjo, "projectScale"));
                     arrayList.add(pm);
                 }

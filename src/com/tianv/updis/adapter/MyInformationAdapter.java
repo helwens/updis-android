@@ -15,7 +15,8 @@ public class MyInformationAdapter extends UUFragmentPageAdapter {
         super(activity, content);
 //        add(new ChangePasswordFragment(activity, Constant.VIEW_CHANGE_PWD));
 //        add(new MyInfoDetailFragment(activity, Constant.VIEW_USER_INFO));
-        add(new MySendListFragment(activity, Constant.VIEW_USER_SEND_LIST));
         add(new SendMsgFragment(activity, Constant.VIEW_USER_SEND_MSG));
+        add(new MySendListFragment(activity, Constant.VIEW_USER_SEND_LIST));
+
     }
 }

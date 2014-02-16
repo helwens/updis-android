@@ -11,6 +11,8 @@
     <ListView
         android:layout_marginTop="@dimen/margin_vertical"
         android:id="@+id/projectlist_lv"
+        android:listSelector="@color/transparent"
+        android:divider="@null"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 

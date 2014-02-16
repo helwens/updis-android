@@ -40,6 +40,12 @@ public class ProjectListActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_projectlist);
         findViewById();
+
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
         initView();
     }
 
@@ -95,9 +101,16 @@ public class ProjectListActivity extends Activity {
             }
 
             public void endTask(ArrayList<ProjectModel> pModels, AppException appException) {
-                ProjectAdapter projectAdapter = new ProjectAdapter(pModels);
+                final ProjectAdapter projectAdapter = new ProjectAdapter(pModels);
                 mProjectListLv.setAdapter(projectAdapter);
                 mProjectListLv.invalidate();
+                mProjectListLv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        Log.d("asdf", position + "");
+                        startActivityForResult(new Intent(ProjectListActivity.this, ProjectInfoActivity.class).putExtra(Constant.EXTRA_PROJECTMODEL, (ProjectModel) projectAdapter.getItem(position)), 11);
+                    }
+                });
             }
 
             public void doingProgress(CommentModel... fParam) {
@@ -135,27 +148,29 @@ public class ProjectListActivity extends Activity {
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
-            ViewHoler viewHoler = null;
+//            ViewHoler viewHoler = null;
             if (convertView == null) {
                 convertView = LayoutInflater.from(ProjectListActivity.this).inflate(R.layout.item_project, null);
-                viewHoler = new ViewHoler();
-                viewHoler.projectName = (TextView) convertView.findViewById(R.id.project_name);
-                viewHoler.projectNum = (TextView) convertView.findViewById(R.id.project_num);
-                convertView.setTag(viewHoler);
-            } else {
-                viewHoler = (ViewHoler) convertView.getTag();
+//                viewHoler = new ViewHoler();
+//                viewHoler.projectName = (TextView) convertView.findViewById(R.id.project_name);
+//                viewHoler.projectNum = (TextView) convertView.findViewById(R.id.project_num);
+//                convertView.setTag(viewHoler);
             }
-            viewHoler.projectName.setText(projectModels.get(position).getProjectName());
-            viewHoler.projectNum.setText(projectModels.get(position).getProjectNumber());
-
+            TextView projectNameTv = (TextView) convertView.findViewById(R.id.project_name);
+            TextView projectNumTv =(TextView) convertView.findViewById(R.id.project_num);
+//            } else {
+//                viewHoler = (ViewHoler) convertView.getTag();
+//            }
+            projectNameTv.setText(projectModels.get(position).getProjectName());
+            projectNumTv.setText(projectModels.get(position).getProjectNumber());
             return convertView;
         }
 
     }
 
-    static class ViewHoler {
-        TextView projectNum;
-        TextView projectName;
-    }
+//    static class ViewHoler {
+//        TextView projectNum;
+//        TextView projectName;
+//    }
 
 }

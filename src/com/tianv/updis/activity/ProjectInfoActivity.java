@@ -38,14 +38,8 @@ public class ProjectInfoActivity extends Activity {
             mDesignDepartmentTv.setText(getFilterString(pm.getDesignDepartment()));
             mProjectScaleTv.setText(getFilterString(pm.getProjectScale()));
             mPartyNameTv.setText(getFilterString(pm.getPartyAName()));
-            //todo
-            String leader[] = pm.getProjectLeaders().split(",");
-            if (leader.length > 0) {
-                String temp = "";
-                for (String leader1 : leader) {
-                    temp = temp + leader1 + ",";
-                }
-                mProjectLeadersTv.setText(temp.subSequence(0, temp.length() - 1));
+            if (!TextUtils.isEmpty(pm.getProjectLeaders())) {
+                mProjectLeadersTv.setText(pm.getProjectLeaders());
             } else {
                 mProjectLeadersTv.setText("-");
             }
