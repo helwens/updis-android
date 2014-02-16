@@ -37,6 +37,13 @@
 
     </string-array>
 
+    <string-array name="projectlist_tab_text">
+        <!--<item>密码修改</item>-->
+        <!--<item>个人信息</item>-->
+        <item>待处理项目</item>
+    </string-array>
+
+
     <string name="setting_push_title">消息推送:</string>
     <string name="setting_push_title_notice">通知</string>
     <string name="setting_push_title_bidding">招投标信息</string>

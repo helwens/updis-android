@@ -62,7 +62,7 @@ public class MainActivityGroup extends ActivityGroup {
     @SuppressWarnings("rawtypes")
     public static Class mTabClassArray[] = {
             CategoryMessageActivity.class, PersonnelMessageActivity.class,
-            MyInformationActivity.class, ProjectListActivity.class,SettingActivity.class
+            MyInformationActivity.class, ProjectListV2Activity.class,SettingActivity.class
     };
 
     private final int NAVIGATOR_HOME = 0;

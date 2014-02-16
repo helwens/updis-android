@@ -106,6 +106,8 @@ public abstract class BaseFragment extends UUFragment {
         }
     }
 
+
+
     protected void initViewAndBtnNumber() {
         buttons = new ArrayList<Button>();
         childViews = new ArrayList<View>();

@@ -13,6 +13,7 @@ public class Constant {
     public static final String UPDIS_STORE_KEY_PLAINTEXTPASSWORD = "updis_store_key_plaintextpassword";
     public static final String INTERFACE_FETCH_PROJECTLIST = "/project/getPendingProjects";
     public static final String EXTRA_PROJECTMODEL = "extraProjectModel";
+    public static final String VIEW_PROJECT_LIST = "15";
     public static String COOKIES = "";
     /**
      * 一小时
