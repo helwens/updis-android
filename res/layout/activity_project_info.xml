@@ -8,7 +8,9 @@
 
     <include layout="@layout/top_navbar_layout" />
 
-    <RelativeLayout style="@style/project_info_layout">
+    <RelativeLayout
+        style="@style/project_info_layout"
+        >
 
         <TextView
             android:text="@string/project_name"
@@ -16,7 +18,6 @@
 
         <TextView
             android:id="@+id/project_name"
-            android:maxEms="10"
             style="@style/project_info_right" />
     </RelativeLayout>
 

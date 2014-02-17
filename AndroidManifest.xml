@@ -219,7 +219,9 @@
             android:value="developer-default" />
         <meta-data
             android:name="JPUSH_APPKEY"
-            android:value="f7ac7c23cb85d131df8102d5" />
+            android:value="995ae29897e9e4271cca5fca" />
+        <!--android:value="f7ac7c23cb85d131df8102d5" />-->
+        <!--995ae29897e9e4271cca5fca-->
         <!-- </>值来自开发者平台取得的AppKey -->
 
     </application>

@@ -273,7 +273,7 @@ public class ProjectListFragment extends BaseFragment implements AdapterView.OnI
 
         ProjectListFragment.this.mActivity.startActivityForResult(
                 new Intent(this.mActivity, ProjectInfoActivity.class).putExtra(Constant.EXTRA_PROJECTMODEL,
-                        (ProjectModel) projectListAdapter.getItem(position)), 11);
+                        (ProjectModel) projectListAdapter.getItem(position-1)), 11);
     }
 
     public void onDisplay() {
@@ -332,15 +332,30 @@ public class ProjectListFragment extends BaseFragment implements AdapterView.OnI
 
         @Override
         public View getView(int position, View convertView, ViewGroup parent) {
+            ViewHolder holder;
             if (convertView == null) {
                 convertView = LayoutInflater.from(ProjectListFragment.this.mActivity).inflate(R.layout.resource_common_item, null);
+                holder = new ViewHolder();
+                holder.iconView = (ImageView) convertView.findViewById(R.id.resource_icon);
+                holder.titleView = (TextView) convertView.findViewById(R.id.txt_title);
+                holder.dateView = (TextView) convertView.findViewById(R.id.txt_date);
+                holder.dateView.setVisibility(View.GONE);
+                holder.commentCountView = (TextView) convertView.findViewById(R.id.txt_commentcount);
+                holder.commentCountView.setVisibility(View.GONE);
+                holder.subtitleView = (TextView) convertView.findViewById(R.id.txt_subtitle);
+
+                convertView.setTag(holder);
+            } else {
+                holder = (ViewHolder) convertView.getTag();
             }
+            holder.iconView.setImageResource(R.drawable.icoarr);
+            holder.titleView.setText(projectModels.get(position).getProjectName());
+            holder.subtitleView.setText(projectModels.get(position).getProjectNumber());
 
-
-            TextView projectNameTv = (TextView) convertView.findViewById(R.id.project_name);
-            TextView projectNumTv = (TextView) convertView.findViewById(R.id.project_num);
-            projectNameTv.setText(projectModels.get(position).getProjectName());
-            projectNumTv.setText(projectModels.get(position).getProjectNumber());
+//            TextView projectNameTv = (TextView) convertView.findViewById(R.id.project_name);
+//            TextView projectNumTv = (TextView) convertView.findViewById(R.id.project_num);
+//            projectNameTv.setText(projectModels.get(position).getProjectName());
+//            projectNumTv.setText(projectModels.get(position).getProjectNumber());
             return convertView;
         }
 

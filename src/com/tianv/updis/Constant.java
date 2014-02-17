@@ -243,7 +243,7 @@ public class Constant {
      */
     public static final String UPDIS_DIC_KEY_SUBJECT = "subject_key";
 
-    //debug 8081 8010
+    //debug 8081 product 8010
     public static final String MAIN_DOMAIN = "http://phone.updis.cn:8081/rest";
 
     /**
