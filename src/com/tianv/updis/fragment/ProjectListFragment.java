@@ -2,10 +2,15 @@ package com.tianv.updis.fragment;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.melvin.android.base.common.ui.MListView;
 import com.melvin.android.base.fragment.BaseFragment;
@@ -13,15 +18,14 @@ import com.melvin.android.base.task.AsyncMockTask;
 import com.tianv.updis.AppException;
 import com.tianv.updis.Constant;
 import com.tianv.updis.R;
-import com.tianv.updis.activity.CommonResourceDetailActivity;
-import com.tianv.updis.adapter.CommonListAdapter;
+import com.tianv.updis.activity.ProjectInfoActivity;
 import com.tianv.updis.listener.LoadResourceListener;
+import com.tianv.updis.model.ProjectModel;
 import com.tianv.updis.model.ResourceModel;
 import com.tianv.updis.model.UIUtilities;
 import com.tianv.updis.network.CollectResource;
 import com.tianv.updis.task.ProjectListTask;
 import com.tianv.updis.task.ReLoginTask;
-import com.tianv.updis.task.ResourcesLoadTask;
 import com.tianv.updis.task.TaskCallBack;
 import com.uucun.android.logger.Logger;
 import com.uucun.android.utils.networkinfo.NetWorkInfo;
@@ -37,9 +41,11 @@ public class ProjectListFragment extends BaseFragment implements AdapterView.OnI
 
     private MListView listView;
 
-    private CommonListAdapter commonListAdapter;
+//    private CommonListAdapter commonListAdapter;
 
-    private ResourcesLoadTask projectListTask;
+    private ProjectListAdapter projectListAdapter;
+
+    private ProjectListTask projectListTask;
 
     private int totalPage = 0;
 
@@ -96,7 +102,6 @@ public class ProjectListFragment extends BaseFragment implements AdapterView.OnI
                     resourceList.clear();
                     resourceList = null;
                 }
-                commonListAdapter.clear();
                 onLoadingResource();
             }
         });
@@ -106,9 +111,11 @@ public class ProjectListFragment extends BaseFragment implements AdapterView.OnI
             listView.addFooterView(dummy);
         }
 
-        commonListAdapter = new CommonListAdapter(mActivity, getListenerResource(), listView,
-                this.moduleCode);
-        listView.setAdapter(commonListAdapter);
+//        commonListAdapter = new CommonListAdapter(mActivity, getListenerResource(), listView,
+//                this.moduleCode);
+        projectListAdapter = new ProjectListAdapter(new ArrayList<ProjectModel>());
+
+        listView.setAdapter(projectListAdapter);
         if (resourceList != null) {
             totalPage = loginTotalPage;
             if (loginTotalPage == 1) {
@@ -127,7 +134,7 @@ public class ProjectListFragment extends BaseFragment implements AdapterView.OnI
     }
 
     public void onChangeView(int index, View view) {
-        if (commonListAdapter != null && !commonListAdapter.isEmpty()) {
+        if (projectListAdapter != null && !projectListAdapter.isEmpty()) {
             return;
         }
         onLoadingResource();
@@ -138,7 +145,7 @@ public class ProjectListFragment extends BaseFragment implements AdapterView.OnI
         if (firstLoaded) {
             if (!NetWorkInfo.isNetworkAvailable(mActivity)) {
                 /*** 无数据，无网络 **/
-                if (commonListAdapter.isEmpty()) {
+                if (projectListAdapter.isEmpty()) {
                     onError(AppException.NO_NETWORK_ERROR_CODE);
                 } else {
                     /** 有数据无网络 ***/
@@ -174,63 +181,77 @@ public class ProjectListFragment extends BaseFragment implements AdapterView.OnI
         return pageFetcher;
     }
 
-//    private TaskCallBack<ResourceModel, ArrayList<ResourceModel>> getResourceListTask() {
-//        TaskCallBack<ResourceModel, ArrayList<ResourceModel>> taskCallBask = new TaskCallBack<ResourceModel, ArrayList<ResourceModel>>() {
-//
-//            public void beforeDoingTask() {
-//                listView.addFooterView(mFootView, null, false);
-//                mFootView.setVisibility(View.VISIBLE);
-//                if (commonListAdapter != null && commonListAdapter.isEmpty()) {
-//                    loadingLayout.setVisibility(View.VISIBLE);
-//                }
-//            }
-//
-//            public void doingTask() {
-//
-//            }
-//
-//            public void onCancel() {
-//
-//            }
-//
-//            public void endTask(ArrayList<ResourceModel> eParam, AppException appException) {
-//                listView.removeFooterView(mFootView);
-//                loadingLayout.setVisibility(View.GONE);
-//                firstLoaded = true;
-//                if (appException != null && eParam == null) {
-//                    if (appException.errorCode == AppException.LOGIN_TIME_OUT) {
-//                        //登录超时
-//                        ReLoginTask reLoginTask = new ReLoginTask(mActivity);
-//                        reLoginTask.setReLoginTaskListener(reLoginTaskListener);
-//                        reLoginTask.login();
-//                        return;
-//                    }
-//                    if (commonListAdapter != null && !commonListAdapter.isEmpty()) {
-//                        Logger.i("endTask-----", String.valueOf(currentPageSize));
-//                        UIUtilities.showCustomToast(mActivity, R.string.updis_network_error_tip);
-//                    } else {
-//                        onError(appException.errorCode);
-//                    }
-//                    listView.onRefreshComplete();
-//                    return;
-//                }
-//                if (eParam != null) {
-//                    int size = eParam.size();
-//                    for (int i = 0; i < size; i++) {
-//                        ResourceModel resource = eParam.get(i);
-//                        commonListAdapter.add(resource);
-//                    }
-//                    currentPageSize++;
-//                }
-//                listView.onRefreshComplete();
-//            }
-//
-//            public void doingProgress(ResourceModel... fParam) {
-//
-//            }
-//        };
-//        return taskCallBask;
-//    }
+    private TaskCallBack<ProjectModel, ArrayList<ProjectModel>> getResourceListTask() {
+        TaskCallBack<ProjectModel, ArrayList<ProjectModel>> taskCallBask = new TaskCallBack<ProjectModel, ArrayList<ProjectModel>>() {
+            /**
+             * @Title: beforeDoingTask
+             * @Description: 任务开始回调
+             */
+            @Override
+            public void beforeDoingTask() {
+                listView.addFooterView(mFootView, null, false);
+                mFootView.setVisibility(View.VISIBLE);
+                if (projectListAdapter != null && projectListAdapter.isEmpty()) {
+                    loadingLayout.setVisibility(View.VISIBLE);
+                }
+            }
+
+            /**
+             * @Title: doingTask
+             * @Description: 任务正在进行中回调
+             */
+            @Override
+            public void doingTask() {
+
+            }
+
+            @Override
+            public void onCancel() {
+            }
+
+            @Override
+            public void doingProgress(ProjectModel... fParam) {
+            }
+
+            /**
+             * @param eParam
+             * @param appException
+             * @Title: endTask
+             * @Description: 结束任务回调
+             */
+            @Override
+            public void endTask(ArrayList<ProjectModel> eParam, AppException appException) {
+                listView.removeFooterView(mFootView);
+                loadingLayout.setVisibility(View.GONE);
+                firstLoaded = true;
+                if (appException != null && eParam == null) {
+                    if (appException.errorCode == AppException.LOGIN_TIME_OUT) {
+                        //登录超时
+                        ReLoginTask reLoginTask = new ReLoginTask(mActivity);
+                        reLoginTask.setReLoginTaskListener(reLoginTaskListener);
+                        reLoginTask.login();
+                        return;
+                    }
+                    if (projectListAdapter != null && projectListAdapter.getCount() != 0) {
+                        Logger.i("endTask-----", String.valueOf(currentPageSize));
+                        UIUtilities.showCustomToast(mActivity, R.string.updis_network_error_tip);
+                    } else {
+                        onError(appException.errorCode);
+                    }
+                    listView.onRefreshComplete();
+                    return;
+                }
+                if (eParam != null) {
+                    projectListAdapter = new ProjectListAdapter(eParam);
+                    listView.setAdapter(projectListAdapter);
+
+                }
+                listView.onRefreshComplete();
+            }
+
+        };
+        return taskCallBask;
+    }
 
     private LoadResourceListener getListenerResource() {
         LoadResourceListener listener = new LoadResourceListener() {
@@ -243,18 +264,22 @@ public class ProjectListFragment extends BaseFragment implements AdapterView.OnI
 
     @Override
     public void onItemClick(AdapterView<?> arg0, View view, int position, long id) {
-        ResourceModel resource = (ResourceModel) listView.getAdapter().getItem(position);
-        if (resource != null) {
-            // 打开详情页面
-            UIUtilities.showDetail(mActivity, CommonResourceDetailActivity.class,
-                    resource.contentId, this.moduleCode);
-        }
+//        ResourceModel resource = (ResourceModel) listView.getAdapter().getItem(position);
+//        if (resource != null) {
+//            // 打开详情页面
+//            UIUtilities.showDetail(mActivity, CommonResourceDetailActivity.class,
+//                    resource.contentId, this.moduleCode);
+//        }
+
+        ProjectListFragment.this.mActivity.startActivityForResult(
+                new Intent(this.mActivity, ProjectInfoActivity.class).putExtra(Constant.EXTRA_PROJECTMODEL,
+                        (ProjectModel) projectListAdapter.getItem(position)), 11);
     }
 
     public void onDisplay() {
         super.onDisplay();
-        if (commonListAdapter != null && !commonListAdapter.isEmpty()) {
-            commonListAdapter.notifyDataSetChanged();
+        if (projectListAdapter != null && !projectListAdapter.isEmpty()) {
+            projectListAdapter.notifyDataSetChanged();
         }
     }
 
@@ -278,4 +303,59 @@ public class ProjectListFragment extends BaseFragment implements AdapterView.OnI
             onLoadingResource();
         }
     };
+
+    private class ProjectListAdapter extends BaseAdapter {
+        private ArrayList<ProjectModel> projectModels;
+
+        private ProjectListAdapter(ArrayList<ProjectModel> projectModels) {
+            this.projectModels = projectModels;
+        }
+
+        public boolean isEmpty() {
+            return getCount() == 0;
+        }
+
+        @Override
+        public int getCount() {
+            return projectModels.size();
+        }
+
+        @Override
+        public Object getItem(int position) {
+            return projectModels.get(position);
+        }
+
+        @Override
+        public long getItemId(int position) {
+            return 0;
+        }
+
+        @Override
+        public View getView(int position, View convertView, ViewGroup parent) {
+            if (convertView == null) {
+                convertView = LayoutInflater.from(ProjectListFragment.this.mActivity).inflate(R.layout.resource_common_item, null);
+            }
+
+
+            TextView projectNameTv = (TextView) convertView.findViewById(R.id.project_name);
+            TextView projectNumTv = (TextView) convertView.findViewById(R.id.project_num);
+            projectNameTv.setText(projectModels.get(position).getProjectName());
+            projectNumTv.setText(projectModels.get(position).getProjectNumber());
+            return convertView;
+        }
+
+    }
+
+    private static class ViewHolder {
+        ImageView iconView;
+
+        TextView titleView;
+
+        TextView dateView;
+
+        TextView commentCountView;
+
+        TextView subtitleView;
+
+    }
 }

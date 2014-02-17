@@ -16,6 +16,7 @@
 
         <TextView
             android:id="@+id/project_name"
+            android:maxEms="10"
             style="@style/project_info_right" />
     </RelativeLayout>
 

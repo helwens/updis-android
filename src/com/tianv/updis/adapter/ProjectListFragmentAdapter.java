@@ -9,8 +9,8 @@ import com.tianv.updis.fragment.ProjectListFragment;
 /**
  * Created by Wincent on 14-2-16.
  */
-public class ProjectListAdapter extends UUFragmentPageAdapter {
-    public ProjectListAdapter(Activity activity, String[] title) {
+public class ProjectListFragmentAdapter extends UUFragmentPageAdapter {
+    public ProjectListFragmentAdapter(Activity activity, String[] title) {
         super(activity, title);
         add(new ProjectListFragment(activity, Constant.VIEW_PROJECT_LIST));
     }

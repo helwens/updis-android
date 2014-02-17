@@ -6,8 +6,7 @@ import android.support.v4.view.ViewPager;
 import com.melvin.android.base.activity.BaseFragmentActivity;
 import com.melvin.android.base.common.ui.PageIndicator;
 import com.tianv.updis.R;
-import com.tianv.updis.adapter.MyInformationAdapter;
-import com.tianv.updis.adapter.ProjectListAdapter;
+import com.tianv.updis.adapter.ProjectListFragmentAdapter;
 
 /**
  * Created by Wincent on 14-2-16.
@@ -18,7 +17,7 @@ public class ProjectListV2Activity extends BaseFragmentActivity {
         super.onCreate(arg0);
         setContentView(R.layout.common_viewpage_layout);
         String title[] = getResources().getStringArray(R.array.projectlist_tab_text);
-        mAdapter = new ProjectListAdapter(this, title);
+        mAdapter = new ProjectListFragmentAdapter(this, title);
         mIndicator = (PageIndicator) findViewById(R.id.indicator);
         mPager = (ViewPager) findViewById(R.id.pager);
         mPager.setAdapter(mAdapter);
