@@ -18,7 +18,6 @@
         <TextView
             android:id="@+id/project_name"
             android:textColor="@color/about_gray"
-            android:text="fasdf"
             style="@style/ResourceDetailsLabel.Small"
             android:layout_marginLeft="8dp"
             android:layout_centerVertical="true"
@@ -39,7 +38,6 @@
             android:layout_marginRight="8dp"
             style="@style/ResourceDetailsLabel.Small"
             android:layout_toLeftOf="@+id/right_arrow"
-            android:text="asdfasdf"
             android:id="@+id/project_num"
             android:textColor="@color/about_gray"
             android:layout_width="wrap_content"
